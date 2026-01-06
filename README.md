@@ -1,16 +1,57 @@
-# React + Vite
+🚀 Jaid Khan – React Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio built using React. This website showcases my skills, projects, experience, and certifications with a modern UI and smooth user experience.
 
-Currently, two official plugins are available:
+🔗 Live Portfolio: https://jaidkhan.netlify.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 GitHub: https://github.com/Jaid-Khan
 
-## React Compiler
+🔗 LinkedIn: https://www.linkedin.com/in/jaid-khan
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+📌 About the Portfolio
 
-## Expanding the ESLint configuration
+This portfolio is designed to highlight my journey as a Frontend / MERN Stack Developer, featuring responsive layouts, smooth navigation, and real-world projects. The focus is on clean design, performance, and usability across all devices.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🛠️ Tech Stack Used
+
+Frontend: React.js, JavaScript (ES6+)
+
+Styling: Tailwind CSS
+
+Routing: React Router
+
+Deployment: Netlify
+
+Version Control: Git & GitHub
+
+✨ Features
+
+⚡ Fully responsive design (mobile, tablet & desktop)
+
+🧭 Smooth scroll navigation
+
+📱 Mobile-friendly fullscreen menu
+
+🧑‍💻 Dedicated sections for Skills, Projects, Experience & Education
+
+🎨 Clean UI with modern animations
+
+🔗 Quick access to live projects and source code
+
+📂 Sections Included
+
+Hero Section – Introduction & role
+
+About Me – Background and career goals
+
+Skills – Frontend & MERN stack skills
+
+Projects – Real-world projects with live demos
+
+Experience – Practical and professional experience
+
+Education – Academic background
+
+Certifications – Courses & achievements
+
+Contact – Easy ways to get in touch
