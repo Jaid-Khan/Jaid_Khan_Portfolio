@@ -1,3 +1,4 @@
+import Hero from "./Hero"
 import Navbar from "./Navbar"
 import About from "./About"
 import Skills from "./Skills"
@@ -7,7 +8,7 @@ import Footer from "./Footer"
 import Education from "./Education"
 import Experience from "./Experience"
 import Certifications from "./Certifications"
-import Hero from "./hero"
+
 
 export default function Home() {
   return (
