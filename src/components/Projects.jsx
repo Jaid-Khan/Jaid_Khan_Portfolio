@@ -21,7 +21,7 @@ export default function Projects() {
       description:
         "Built a fully responsive Cyber Café website featuring digital services like form filling, document processing, printing, scanning, and quick navigation links with a smooth UI experience.",
       tech: ["HTML", "CSS3", "JavaScript", "Tailwind CSS", "Responsive Design"],
-      github: "https://github.com",
+      github: "https://github.com/Jaid-Khan/Always-Online-Cyber-Cafe-Website",
       demo: "https://alwaysonlineshop.netlify.app/",
     },
     {
@@ -30,7 +30,7 @@ export default function Projects() {
         "A personal portfolio website built to showcase my skills, projects, and professional background with a clean and responsive UI.",
       tech: ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
       github: "https://github.com/Jaid-Khan/Jaid_Khan_Portfolio_Website",
-      demo: "https://jaidkhan.netlify.app/",
+      demo: "https://jaidkhanv1.netlify.app/",
     },
     {
       title: "Digital Clock",

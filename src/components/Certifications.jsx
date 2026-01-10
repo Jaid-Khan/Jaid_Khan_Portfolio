@@ -7,28 +7,28 @@ export default function Certifications() {
       provider: "LetsUpgrade",
       description:
         "Completed an intensive JavaScript Bootcamp covering core and advanced concepts.",
-      link: "#",
+      link: "/src/assets/javascript-bootcamp-certification.jpg",
     },
     {
       title: "Git & GitHub",
       provider: "LetsUpgrade",
       description:
         "Hands-on certification focused on version control and GitHub workflows.",
-      link: "#",
+      link: "/src/assets/git&github-certification.jpg",
     },
     {
       title: "HTML & CSS Bootcamp",
       provider: "LetsUpgrade",
       description:
         "Built strong foundations in semantic HTML and modern CSS.",
-      link: "#",
+      link: "/src/assets/html&css-bootcamp-certification.jpg",
     },
     {
       title: "CSS (Basic)",
       provider: "HackerRank",
       description:
         "Certified in CSS fundamentals and modern styling best practices.",
-      link: "#",
+      link: "/src/assets/css-certification-hackerrank.jpg",
     },
   ];
 
