@@ -17,7 +17,8 @@ export default function Experience() {
         "Maintained technical documentation, workflow records, and operational reports",
         "Demonstrated strong communication, analytical, and technical skills as per formal skill assessment",
       ],
-      performance: "Performance Rating: Good (as per official skill assessment)",
+      performance:
+        "Performance Rating: Good (as per official skill assessment)",
       certificate: {
         label: "View Experience Certificate",
         link: experienceCertificate,
@@ -37,7 +38,10 @@ export default function Experience() {
       </div>
 
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold mb-16 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+        <h2
+          data-aos="zoom-in"
+          className="text-4xl font-bold mb-16 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
+        >
           Experience
         </h2>
 
@@ -45,6 +49,7 @@ export default function Experience() {
           {experiences.map((exp, index) => (
             <div
               key={index}
+              data-aos="zoom-in-down"
               className="
                 relative p-10 rounded-2xl
                 bg-white/5 backdrop-blur-xl
@@ -72,9 +77,7 @@ export default function Experience() {
               </div>
 
               <div className="relative space-y-4 mt-6">
-                <h3 className="text-2xl font-bold text-white">
-                  {exp.role}
-                </h3>
+                <h3 className="text-2xl font-bold text-white">{exp.role}</h3>
 
                 <p className="font-semibold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
                   {exp.company}

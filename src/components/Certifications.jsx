@@ -44,7 +44,7 @@ export default function Certifications() {
       </div>
 
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-16 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+        <h2 data-aos="zoom-in" className="text-4xl font-bold mb-16 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
           Certifications
         </h2>
 
@@ -52,6 +52,7 @@ export default function Certifications() {
           {certifications.map((cert, index) => (
             <div
               key={index}
+              data-aos="zoom-in-up"
               className="
                 relative group p-8 rounded-2xl
                 bg-white/5 backdrop-blur-xl

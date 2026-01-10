@@ -15,7 +15,6 @@ export default function Hero() {
 
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
-
           {/* IMAGE – FIRST ON MOBILE */}
           <div className="flex justify-center md:justify-end order-1 md:order-2">
             <div className="relative group">
@@ -25,6 +24,7 @@ export default function Hero() {
                 <img
                   src={heroImg}
                   alt="Jaid Khan"
+                  data-aos="fade-up"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -33,32 +33,60 @@ export default function Hero() {
 
           {/* TEXT – SECOND ON MOBILE */}
           <div className="space-y-6 text-center md:text-left order-2 md:order-1">
-            <span className="inline-block px-4 py-1 rounded-full bg-white/10 text-yellow-400 text-sm font-medium backdrop-blur">
+            <span
+              data-aos="fade-right"
+              data-aos-anchor="#example-anchor"
+              data-aos-offset="500"
+              data-aos-duration="200"
+              className="inline-block px-4 py-1 rounded-full bg-white/10 text-yellow-400 text-sm font-medium backdrop-blur"
+            >
               👋 Welcome to my portfolio
             </span>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
-              Hi, I’m{" "}
+            <h1
+              data-aos="fade-right"
+              data-aos-anchor="#example-anchor"
+              data-aos-offset="500"
+              data-aos-duration="400"
+              className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight"
+            >
+              <span>Hi, I’m </span>
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
                 Jaid Khan
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl font-medium text-white/90">
+            <p
+              data-aos="fade-right"
+              data-aos-anchor="#example-anchor"
+              data-aos-offset="500"
+              data-aos-duration="600"
+              className="text-lg sm:text-xl font-medium text-white/90"
+            >
               Frontend Developer (React) · MERN Stack Enthusiast
             </p>
 
-            <p className="text-base sm:text-lg text-white/70 max-w-xl mx-auto md:mx-0">
+            <p
+              data-aos="fade-right"
+              data-aos-anchor="#example-anchor"
+              data-aos-offset="500"
+              data-aos-duration="800"
+              className="text-base sm:text-lg text-white/70 max-w-xl mx-auto md:mx-0"
+            >
               I build modern, responsive, and scalable web applications using
-              React and the MERN stack. Passionate about clean UI, component-driven
-              architecture, REST API integration, and writing maintainable,
-              user-friendly code.
+              React and the MERN stack. Passionate about clean UI,
+              component-driven architecture, REST API integration, and writing
+              maintainable, user-friendly code.
             </p>
 
-           <div className="flex flex-col sm:flex-row gap-4 pt-6 justify-center md:justify-start">
-  <button
-    onClick={() => scrollToSection("projects")}
-    className="
+            <div className="flex flex-col sm:flex-row gap-4 pt-6 justify-center md:justify-start">
+              <button
+                data-aos="fade-right"
+                data-aos-anchor="#example-anchor"
+                data-aos-offset="500"
+                data-aos-duration="1000"
+                onClick={() => scrollToSection("projects")}
+                className="
       group relative px-8 py-3 rounded-full font-semibold
       bg-white/10 backdrop-blur
       border border-white/20
@@ -67,20 +95,26 @@ export default function Hero() {
       hover:shadow-yellow-400/30 hover:-translate-y-1
       transition-all
     "
-  >
-    <span className="
+              >
+                <span
+                  className="
       absolute inset-0 rounded-full
       bg-gradient-to-r from-yellow-400 to-orange-500
       opacity-0 group-hover:opacity-100 transition
-    " />
-    <span className="relative group-hover:text-black transition">
-      View Projects
-    </span>
-  </button>
+    "
+                />
+                <span className="relative group-hover:text-black transition">
+                  View Projects
+                </span>
+              </button>
 
-  <button
-    onClick={() => scrollToSection("contact")}
-    className="
+              <button
+                data-aos="fade-right"
+                data-aos-anchor="#example-anchor"
+                data-aos-offset="500"
+                data-aos-duration="1200"
+                onClick={() => scrollToSection("contact")}
+                className="
       group relative px-8 py-3 rounded-full font-semibold
       bg-white/10 backdrop-blur
       border border-white/20
@@ -89,20 +123,20 @@ export default function Hero() {
       hover:shadow-orange-500/30 hover:-translate-y-1
       transition-all
     "
-  >
-    <span className="
+              >
+                <span
+                  className="
       absolute inset-0 rounded-full
       bg-gradient-to-r from-yellow-400 to-orange-500
       opacity-0 group-hover:opacity-100 transition
-    " />
-    <span className="relative group-hover:text-black transition">
-      Contact Me
-    </span>
-  </button>
-</div>
-
+    "
+                />
+                <span className="relative group-hover:text-black transition">
+                  Contact Me
+                </span>
+              </button>
+            </div>
           </div>
-
         </div>
       </div>
     </section>

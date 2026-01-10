@@ -54,7 +54,7 @@ export default function Projects() {
       </div>
 
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-16 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+        <h2 data-aos="zoom-in" className="text-4xl font-bold mb-16 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
           Featured Projects
         </h2>
 
@@ -62,6 +62,8 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
+               data-aos="zoom-out-right"
+     data-aos-anchor-placement="center-bottom"
               className="
                 relative group rounded-2xl p-8
                 bg-white/5 backdrop-blur-xl

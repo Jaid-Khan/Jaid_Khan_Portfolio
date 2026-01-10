@@ -72,7 +72,7 @@ export default function Skills() {
       </div>
 
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-16 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+        <h2 data-aos="zoom-in" className="text-4xl font-bold mb-16 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
           Skills & Technologies
         </h2>
 
@@ -80,6 +80,9 @@ export default function Skills() {
           {skillCategories.map((category) => (
             <div
               key={category.title}
+              data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="400"
               className="
                 relative p-8 rounded-2xl
                 bg-white/5 backdrop-blur-xl
@@ -100,6 +103,7 @@ export default function Skills() {
                 {category.skills.map((skill) => (
                   <span
                     key={skill.name}
+                    data-aos="zoom-out-right"
                     className="
                       flex items-center gap-2 px-4 py-2 rounded-full
                       text-sm font-medium
