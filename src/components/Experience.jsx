@@ -39,7 +39,6 @@ export default function Experience() {
 
       <div className="max-w-5xl mx-auto">
         <h2
-          data-aos="zoom-in"
           className="text-4xl font-bold mb-16 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
         >
           Experience
@@ -49,7 +48,6 @@ export default function Experience() {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              data-aos="zoom-in-down"
               className="
                 relative p-10 rounded-2xl
                 bg-white/5 backdrop-blur-xl

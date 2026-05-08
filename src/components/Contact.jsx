@@ -37,14 +37,12 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto">
         {/* Heading */}
         <h2
-          data-aos="zoom-in-right"
           className="text-4xl font-bold mb-4 text-center bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
         >
           Let’s Connect
         </h2>
 
         <p
-          data-aos="zoom-in-right"
           className="text-center mb-12 text-lg text-white/70"
         >
           I’m always open to discussing new projects, creative ideas, or
@@ -54,7 +52,6 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Left Info */}
           <div
-            data-aos="zoom-in-right"
             className="
               p-6 rounded-2xl
               bg-white/5 backdrop-blur-xl
@@ -104,7 +101,6 @@ export default function Contact() {
           {/* Form */}
           <form
             onSubmit={handleSubmit}
-            data-aos="zoom-in-left"
             className="
               p-6 rounded-2xl space-y-4
               bg-white/5 backdrop-blur-xl
@@ -156,7 +152,6 @@ export default function Contact() {
 
             <button
               type="submit"
-              data-aos="zoom-in-up"
               className="
                 w-full px-6 py-3 rounded-full font-semibold
                 bg-gradient-to-r from-yellow-400 to-orange-500

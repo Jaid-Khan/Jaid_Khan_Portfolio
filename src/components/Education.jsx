@@ -15,14 +15,13 @@ export default function Education() {
 
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <h2 data-aos="zoom-in" className="text-4xl font-bold mb-16 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+        <h2 className="text-4xl font-bold mb-16 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
           Education
         </h2>
 
         <div className="grid gap-10">
           {/* B.Tech */}
           <div
-          data-aos="zoom-out-down"
             className="
               relative group flex flex-col sm:flex-row gap-8 items-start
               p-8 rounded-2xl
@@ -69,7 +68,6 @@ export default function Education() {
 
           {/* Diploma */}
           <div
-          data-aos="zoom-out-down"
             className="
               relative group flex flex-col sm:flex-row gap-8 items-start
               p-8 rounded-2xl

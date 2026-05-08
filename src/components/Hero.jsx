@@ -24,7 +24,6 @@ export default function Hero() {
                 <img
                   src={heroImg}
                   alt="Jaid Khan"
-                  data-aos="fade-up"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -33,21 +32,11 @@ export default function Hero() {
 
           {/* TEXT – SECOND ON MOBILE */}
           <div className="space-y-6 text-center md:text-left order-2 md:order-1">
-            <span
-              data-aos="fade-right"
-              data-aos-anchor="#example-anchor"
-              data-aos-offset="500"
-              data-aos-duration="200"
-              className="inline-block px-4 py-1 rounded-full bg-white/10 text-yellow-400 text-sm font-medium backdrop-blur"
-            >
+            <span className="inline-block px-4 py-1 rounded-full bg-white/10 text-yellow-400 text-sm font-medium backdrop-blur">
               👋 Welcome to my portfolio
             </span>
 
             <h1
-              data-aos="fade-right"
-              data-aos-anchor="#example-anchor"
-              data-aos-offset="500"
-              data-aos-duration="400"
               className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight"
             >
               <span>Hi, I’m </span>
@@ -57,20 +46,12 @@ export default function Hero() {
             </h1>
 
             <p
-              data-aos="fade-right"
-              data-aos-anchor="#example-anchor"
-              data-aos-offset="500"
-              data-aos-duration="600"
               className="text-lg sm:text-xl font-medium text-white/90"
             >
               Frontend Developer (React) · MERN Stack Enthusiast
             </p>
 
             <p
-              data-aos="fade-right"
-              data-aos-anchor="#example-anchor"
-              data-aos-offset="500"
-              data-aos-duration="800"
               className="text-base sm:text-lg text-white/70 max-w-xl mx-auto md:mx-0"
             >
               I build modern, responsive, and scalable web applications using
@@ -81,10 +62,6 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-6 justify-center md:justify-start">
               <button
-                data-aos="fade-right"
-                data-aos-anchor="#example-anchor"
-                data-aos-offset="500"
-                data-aos-duration="1000"
                 onClick={() => scrollToSection("projects")}
                 className="
       group relative px-8 py-3 rounded-full font-semibold
@@ -109,10 +86,6 @@ export default function Hero() {
               </button>
 
               <button
-                data-aos="fade-right"
-                data-aos-anchor="#example-anchor"
-                data-aos-offset="500"
-                data-aos-duration="1200"
                 onClick={() => scrollToSection("contact")}
                 className="
       group relative px-8 py-3 rounded-full font-semibold

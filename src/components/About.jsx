@@ -12,12 +12,11 @@ export default function About() {
 
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <h2 data-aos="zoom-in"  className="text-4xl font-bold mb-16 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+        <h2 className="text-4xl font-bold mb-16 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
           About Me
         </h2>
 
-        <div data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom" className="grid md:grid-cols-2 gap-14 items-start">
+        <div className="grid md:grid-cols-2 gap-14 items-start">
           {/* Left Content */}
           <div className="space-y-6">
             <p className="text-lg leading-relaxed text-white/80">
@@ -55,8 +54,8 @@ export default function About() {
                 transition-all
               "
             >
-              <div data-aos="fade-up"
-     data-aos-anchor-placement="top-center" className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-yellow-400/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition pointer-events-none" />
+              <div
+   className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-yellow-400/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition pointer-events-none" />
 
               <h3 className="font-semibold mb-4 text-yellow-400 text-lg">
                 What I Do
@@ -81,8 +80,7 @@ export default function About() {
                 transition-all
               "
             >
-              <div data-aos="fade-up"
-     data-aos-anchor-placement="top-center" className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-yellow-400/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition pointer-events-none" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-yellow-400/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition pointer-events-none" />
 
               <h3 className="font-semibold mb-3 text-yellow-400 text-lg">
                 Current Focus
