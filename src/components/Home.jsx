@@ -13,7 +13,7 @@ import Certifications from "./Certifications"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[oklch(0.08_0_0)]">
+    <div className="min-h-screen bg-[#020617]">
       <main>
       <Navbar />
         <Hero/>
