@@ -91,201 +91,187 @@ export default function Experience() {
     },
   ];
 
-  return (
-    <section
-      id="experience"
-      className="relative overflow-hidden bg-[#020617] text-white py-24 px-5 sm:px-8 lg:px-16"
-    >
-      {/* BACKGROUND */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:70px_70px]" />
+return (
+  <section
+    id="experience"
+    className="bg-[#0F1117] py-10"
+  >
+    <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      {/* HEADER */}
+      <div className="mb-20">
+        <p className="text-sm uppercase tracking-[0.25em] text-[#A1A1AA] mb-4">
+          Career Journey
+        </p>
 
-        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-violet-600/20 blur-[120px] rounded-full" />
+        <h2 className="text-4xl md:text-6xl font-black text-[#F8FAFC] leading-tight">
+          Professional
+          <br />
+          Experience
+        </h2>
 
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan-500/20 blur-[120px] rounded-full" />
+        <p className="mt-6 text-lg text-[#A1A1AA] max-w-3xl leading-relaxed">
+          Professional experience across full-stack development,
+          enterprise software engineering, networking infrastructure,
+          and production-focused technology environments.
+        </p>
       </div>
 
-      <div className="max-w-6xl mx-auto">
-        {/* SECTION TITLE */}
-        <div className="mb-16 text-center lg:text-left">
-          <p className="text-cyan-400 text-sm tracking-[0.3em] uppercase mb-4">
-            Career Journey
-          </p>
-
-          <h2 className="text-4xl sm:text-5xl font-black leading-tight">
-            Professional{" "}
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
-              Experience
-            </span>
-          </h2>
-        </div>
-
-        {/* EXPERIENCE CARDS */}
-        <div className="space-y-10">
-          {experiences.map((exp, index) => (
-            <div
-              key={index}
-              className="
-                relative overflow-hidden
-                rounded-[2rem]
-                border border-white/10
-                bg-white/5
-                backdrop-blur-2xl
-                shadow-[0_20px_50px_rgba(0,0,0,0.45)]
-                p-6 sm:p-8 lg:p-10
-                hover:-translate-y-1
-                transition-all duration-500
-              "
-            >
-              {/* CARD GLOW */}
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-violet-500/10 opacity-0 hover:opacity-100 transition duration-500" />
-
-              {/* TOP */}
-              <div className="relative flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
-                {/* LEFT */}
-                <div className="flex gap-5">
-                  {/* ICON */}
-                  <div
-                    className="
-                      min-w-[60px] h-[60px]
-                      rounded-2xl
-                      flex items-center justify-center
-                      bg-gradient-to-br from-cyan-500 to-violet-600
-                      text-2xl
-                      shadow-[0_0_30px_rgba(59,130,246,0.35)]
-                    "
-                  >
-                    {exp.icon}
-                  </div>
-
-                  {/* CONTENT */}
-                  <div>
-                    <h3 className="text-2xl font-bold text-white">
-                      {exp.role}
-                    </h3>
-
-                    <p className="mt-1 text-cyan-400 font-semibold">
-                      {exp.company}
-                    </p>
-
-                    <p className="mt-2 text-sm text-white/50">
-                      {exp.duration}
-                    </p>
-                  </div>
+      {/* EXPERIENCE LIST */}
+      <div className="space-y-8">
+        {experiences.map((exp, index) => (
+          <div
+            key={index}
+            className="
+              bg-[#161A22]
+              border border-[#272B35]
+              rounded-3xl
+              p-8 lg:p-10
+              transition-all duration-300
+              hover:border-[#343B49]
+            "
+          >
+            {/* TOP */}
+            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-8">
+              <div className="flex gap-5">
+                <div
+                  className="
+                    w-14 h-14
+                    rounded-2xl
+                    bg-[#222734]
+                    border border-[#2B3140]
+                    flex items-center justify-center
+                    text-[#F8FAFC]
+                    text-xl
+                    shrink-0
+                  "
+                >
+                  {exp.icon}
                 </div>
 
-                {/* CERTIFICATE BUTTON */}
-                {exp.certificate && (
-                  <a
-                    href={exp.certificate.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="
-                      group inline-flex items-center justify-center gap-2
-                      px-5 py-3 rounded-xl
-                      bg-white/5
-                      border border-white/10
-                      backdrop-blur-xl
-                      text-sm font-semibold text-white/80
-                      hover:text-white
-                      hover:border-cyan-400/30
-                      hover:bg-white/10
-                      transition-all duration-300
-                    "
-                  >
-                    <FaCertificate className="text-cyan-400" />
+                <div>
+                  <h3 className="text-2xl font-bold text-[#F8FAFC]">
+                    {exp.role}
+                  </h3>
 
-                    {exp.certificate.label}
-                  </a>
-                )}
+                  <p className="mt-1 text-[#D4D4D8] font-medium">
+                    {exp.company}
+                  </p>
+
+                  <p className="mt-2 text-sm text-[#A1A1AA]">
+                    {exp.duration}
+                  </p>
+                </div>
               </div>
 
-              {/* DESCRIPTION */}
-              <p className="relative mt-8 text-white/70 leading-relaxed text-sm sm:text-base">
-                {exp.description}
-              </p>
+              {exp.certificate && (
+                <a
+                  href={exp.certificate.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
+                    inline-flex items-center gap-2
+                    px-5 py-3
+                    rounded-xl
+                    bg-[#222734]
+                    border border-[#2B3140]
+                    text-[#F8FAFC]
+                    text-sm font-semibold
+                    hover:border-[#434C5E]
+                    transition
+                  "
+                >
+                  <FaCertificate />
 
-              {/* RESPONSIBILITIES */}
-              <div className="relative mt-8">
-                <h4 className="text-white font-semibold mb-4">
-                  Key Responsibilities
+                  {exp.certificate.label}
+                </a>
+              )}
+            </div>
+
+            {/* DESCRIPTION */}
+            <p className="text-[#A1A1AA] leading-relaxed mb-8">
+              {exp.description}
+            </p>
+
+            {/* RESPONSIBILITIES */}
+            <div className="mb-8">
+              <h4 className="text-[#F8FAFC] font-semibold mb-5">
+                Key Responsibilities
+              </h4>
+
+              <div className="grid md:grid-cols-2 gap-4">
+                {exp.responsibilities.map((item, i) => (
+                  <div
+                    key={i}
+                    className="
+                      flex items-start gap-3
+                      p-4
+                      rounded-2xl
+                      bg-[#222734]
+                      border border-[#2B3140]
+                    "
+                  >
+                    <span className="w-2 h-2 rounded-full bg-[#F8FAFC] mt-2 shrink-0" />
+
+                    <p className="text-sm text-[#D4D4D8] leading-relaxed">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* SKILLS */}
+            {exp.skills && (
+              <div className="mb-8">
+                <h4 className="text-[#F8FAFC] font-semibold mb-5">
+                  Technologies & Skills
                 </h4>
 
-                <div className="grid sm:grid-cols-2 gap-3">
-                  {exp.responsibilities.map((item, i) => (
+                <div className="flex flex-wrap gap-3">
+                  {exp.skills.map((skill) => (
                     <div
-                      key={i}
+                      key={skill.name}
                       className="
-                        flex items-start gap-3
+                        flex items-center gap-2
+                        px-4 py-2
                         rounded-xl
-                        border border-white/10
-                        bg-white/5
-                        px-4 py-3
+                        bg-[#222734]
+                        border border-[#2B3140]
+                        text-[#E5E7EB]
+                        text-sm
                       "
                     >
-                      <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2" />
+                      <span className="text-base">
+                        {skill.icon}
+                      </span>
 
-                      <p className="text-sm text-white/70 leading-relaxed">
-                        {item}
-                      </p>
+                      {skill.name}
                     </div>
                   ))}
                 </div>
               </div>
+            )}
 
-              {/* SKILLS */}
-              {exp.skills && (
-                <div className="relative mt-8">
-                  <h4 className="text-white font-semibold mb-4">
-                    Technologies & Skills
-                  </h4>
+            {/* PERFORMANCE */}
+            <div
+              className="
+                inline-flex items-center gap-3
+                px-4 py-3
+                rounded-xl
+                bg-[#222734]
+                border border-[#2B3140]
+                text-[#F8FAFC]
+                text-sm font-medium
+              "
+            >
+              <div className="w-2 h-2 rounded-full bg-[#F8FAFC]" />
 
-                  <div className="flex flex-wrap gap-3">
-                    {exp.skills.map((skill) => (
-                      <div
-                        key={skill.name}
-                        className="
-                          flex items-center gap-2
-                          px-4 py-2 rounded-full
-                          border border-white/10
-                          bg-white/5
-                          backdrop-blur-xl
-                          text-sm text-white/80
-                          hover:border-cyan-400/30
-                          hover:bg-white/10
-                          transition-all duration-300
-                        "
-                      >
-                        <span className="text-cyan-400 text-lg">
-                          {skill.icon}
-                        </span>
-
-                        {skill.name}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* PERFORMANCE */}
-              <div
-                className="
-                  relative mt-8
-                  inline-flex items-center gap-2
-                  px-4 py-2 rounded-full
-                  bg-cyan-500/10
-                  border border-cyan-400/20
-                  text-cyan-300 text-sm font-medium
-                "
-              >
-                <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-
-                {exp.performance}
-              </div>
+              {exp.performance}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
 }

@@ -99,93 +99,71 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative overflow-hidden bg-[#020617] text-white py-24"
+      className="py-10 bg-[#0F1117]"
     >
-      {/* BACKGROUND */}
-      <div className="absolute inset-0 -z-10">
-        {/* Grid */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:70px_70px]" />
-
-        {/* Glow Effects */}
-        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-violet-600/20 blur-[120px] rounded-full" />
-
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan-500/20 blur-[120px] rounded-full" />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-16">
-        {/* SECTION TITLE */}
-        <div className="text-center mb-16">
-          <p className="text-cyan-400 text-sm font-semibold tracking-[0.2em] uppercase mb-4">
-            Expertise
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        {/* HEADER */}
+        <div className="mb-24">
+          <p className="text-sm uppercase tracking-[0.25em] text-[#A1A1AA] mb-4">
+            Capabilities
           </p>
 
-          <h2 className="text-4xl sm:text-5xl font-black tracking-tight leading-tight">
-            Skills &
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
-              {" "}
-              Technologies
-            </span>
+          <h2 className="text-5xl md:text-7xl font-black text-[#F8FAFC] leading-none">
+            Technologies
+            <br />
+            & Skills
           </h2>
 
-          <p className="mt-6 text-white/60 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            Crafting modern full-stack applications with scalable architecture,
-            clean UI systems, and production-ready MERN solutions.
+          <p className="mt-8 max-w-3xl text-lg text-[#A1A1AA] leading-relaxed">
+            Building scalable full-stack applications, backend systems,
+            AI-powered products, and developer tooling with a focus on
+            performance, maintainability, and production-ready architecture.
           </p>
         </div>
 
         {/* SKILLS GRID */}
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid lg:grid-cols-2 gap-8">
           {skillCategories.map((category) => (
             <div
               key={category.title}
               className="
-                group relative
+                bg-[#161A22]
+                border border-[#272B35]
                 rounded-3xl
-                border border-white/10
-                bg-white/5
-                backdrop-blur-2xl
-                p-6
-                overflow-hidden
-                hover:-translate-y-2
-                transition-all duration-500
-                shadow-[0_10px_40px_rgba(0,0,0,0.35)]
+                p-8
+                hover:border-[#3A4150]
+                transition-all duration-300
               "
             >
-              {/* HOVER GLOW */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-violet-500/10" />
+              {/* TOP */}
+              <div className="flex justify-between items-start mb-8">
+                <div>
+                  <h3 className="text-2xl font-bold text-[#F8FAFC]">
+                    {category.title}
+                  </h3>
+                </div>
+
               </div>
 
-              {/* TOP BORDER GLOW */}
-              <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-cyan-400/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
-
-              {/* TITLE */}
-              <h3 className="relative text-xl font-bold mb-6">
-                {category.title}
-              </h3>
-
               {/* SKILLS */}
-              <div className="relative flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill) => (
                   <div
                     key={skill.name}
                     className="
-                      group/skill
                       flex items-center gap-2
-                      px-4 py-2
+                      px-4 py-2.5
                       rounded-xl
-                      border border-white/10
-                      bg-[#0f172a]/70
-                      backdrop-blur-xl
-                      text-sm text-white/75
-                      hover:text-white
-                      hover:border-cyan-400/30
-                      hover:bg-white/10
-                      hover:scale-105
+                      bg-[#222734]
+                      border border-[#2B3140]
+                      text-[#E5E7EB]
+                      text-sm
+                      hover:border-[#3F4759]
+                      hover:bg-[#262D3C]
                       transition-all duration-300
                     "
                   >
-                    <span className="text-base text-cyan-400 group-hover/skill:text-cyan-300 transition">
+                    <span className="text-base text-[#F8FAFC]">
                       {skill.icon}
                     </span>
 
@@ -195,6 +173,39 @@ export default function Skills() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* STATS */}
+        <div className="mt-10 grid sm:grid-cols-3 gap-6">
+          <div className="bg-[#161A22] border border-[#272B35] rounded-3xl p-6">
+            <p className="text-[#A1A1AA] text-sm mb-2">
+              Primary Stack
+            </p>
+
+            <h3 className="text-2xl font-bold text-[#F8FAFC]">
+              MERN
+            </h3>
+          </div>
+
+          <div className="bg-[#161A22] border border-[#272B35] rounded-3xl p-6">
+            <p className="text-[#A1A1AA] text-sm mb-2">
+              Focus Area
+            </p>
+
+            <h3 className="text-2xl font-bold text-[#F8FAFC]">
+              Backend + AI
+            </h3>
+          </div>
+
+          <div className="bg-[#161A22] border border-[#272B35] rounded-3xl p-6">
+            <p className="text-[#A1A1AA] text-sm mb-2">
+              Experience
+            </p>
+
+            <h3 className="text-2xl font-bold text-[#F8FAFC]">
+              1+ Years
+            </h3>
+          </div>
         </div>
       </div>
     </section>

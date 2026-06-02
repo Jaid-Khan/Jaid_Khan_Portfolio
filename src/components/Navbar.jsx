@@ -18,7 +18,6 @@ export default function Navbar() {
     { label: "Experience", id: "experience" },
     { label: "Education", id: "education" },
     { label: "About", id: "about" },
-    { label: "Contact", id: "contact" },
   ];
 
   return (
@@ -30,10 +29,9 @@ export default function Navbar() {
             max-w-7xl mx-auto
             h-14
             rounded-2xl
-            border border-white/10
-            bg-white/5
-            backdrop-blur-2xl
-            shadow-[0_8px_32px_rgba(0,0,0,0.35)]
+            border border-[#272B35]
+            bg-[#161A22]/90
+            backdrop-blur-xl
             flex items-center justify-between
             px-4 sm:px-6
           "
@@ -43,8 +41,7 @@ export default function Navbar() {
             to="/"
             className="
               text-xl font-black tracking-tight
-              bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500
-              bg-clip-text text-transparent
+              text-[#F8FAFC]
             "
           >
             JK
@@ -60,49 +57,51 @@ export default function Navbar() {
                   group relative overflow-hidden
                   px-4 py-2 rounded-xl
                   text-sm font-medium
-                  text-white/70 hover:text-white
+                  text-[#A1A1AA]
+                  hover:text-[#F8FAFC]
                   transition-all duration-300
                 "
               >
-                {/* Hover Glow */}
                 <span
                   className="
                     absolute inset-0
                     rounded-xl
-                    bg-gradient-to-r from-cyan-500/20 to-violet-500/20
-                    opacity-0 group-hover:opacity-100
+                    bg-[#222734]
+                    opacity-0
+                    group-hover:opacity-100
                     transition duration-300
                   "
                 />
 
-                {/* Border */}
                 <span
                   className="
                     absolute inset-0 rounded-xl
-                    border border-white/0
-                    group-hover:border-white/10
+                    border border-transparent
+                    group-hover:border-[#2B3140]
                     transition duration-300
                   "
                 />
 
-                <span className="relative z-10">{link.label}</span>
+                <span className="relative z-10">
+                  {link.label}
+                </span>
               </button>
             ))}
           </div>
 
           {/* RIGHT SIDE */}
           <div className="flex items-center gap-4">
-            {/* Resume Button */}
+            {/* HIRE ME */}
             <button
               onClick={() => scrollToSection("contact")}
               className="
                 hidden sm:flex
-               px-4 py-2 rounded-xl
+                px-4 py-2 rounded-xl
                 text-sm font-semibold
-                bg-gradient-to-r from-cyan-500 to-violet-600
-                hover:scale-105
+                bg-[#F8FAFC]
+                text-[#0F1117]
+                hover:opacity-90
                 transition-all duration-300
-                shadow-[0_0_30px_rgba(59,130,246,0.35)]
               "
             >
               Hire Me
@@ -117,7 +116,7 @@ export default function Navbar() {
               <div className="w-7 h-6 flex flex-col justify-between">
                 <span
                   className={`
-                    h-0.5 w-full bg-white rounded-full
+                    h-0.5 w-full bg-[#F8FAFC] rounded-full
                     transition-all duration-300
                     ${isOpen ? "rotate-45 translate-y-2.5" : ""}
                   `}
@@ -125,7 +124,7 @@ export default function Navbar() {
 
                 <span
                   className={`
-                    h-0.5 w-full bg-white rounded-full
+                    h-0.5 w-full bg-[#F8FAFC] rounded-full
                     transition-all duration-300
                     ${isOpen ? "opacity-0" : ""}
                   `}
@@ -133,7 +132,7 @@ export default function Navbar() {
 
                 <span
                   className={`
-                    h-0.5 w-full bg-white rounded-full
+                    h-0.5 w-full bg-[#F8FAFC] rounded-full
                     transition-all duration-300
                     ${isOpen ? "-rotate-45 -translate-y-2.5" : ""}
                   `}
@@ -148,8 +147,8 @@ export default function Navbar() {
       <div
         className={`
           fixed inset-0 z-40
-          bg-[#020617]/95
-          backdrop-blur-2xl
+          bg-[#0F1117]/95
+          backdrop-blur-xl
           pt-10
           flex flex-col items-center justify-center
           gap-5
@@ -162,9 +161,6 @@ export default function Navbar() {
           }
         `}
       >
-        {/* Background Glow */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-cyan-500/20 blur-[120px] rounded-full" />
-
         {navLinks.map((link, index) => (
           <button
             key={link.id}
@@ -174,13 +170,13 @@ export default function Navbar() {
               w-[220px]
               px-6 py-4
               rounded-2xl
-              border border-white/10
-              bg-white/5
-              backdrop-blur-xl
+              border border-[#272B35]
+              bg-[#161A22]
               text-lg font-semibold
-              text-white/80 hover:text-white
-              hover:border-cyan-400/30
-              hover:bg-white/10
+              text-[#A1A1AA]
+              hover:text-[#F8FAFC]
+              hover:border-[#3A4150]
+              hover:bg-[#222734]
               hover:scale-105
               transition-all duration-300
             "

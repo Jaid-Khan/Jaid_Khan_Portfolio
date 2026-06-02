@@ -10,12 +10,9 @@ export default function Certifications() {
     {
       title: "JavaScript Bootcamp",
       provider: "LetsUpgrade",
-
       description:
         "Completed an intensive JavaScript Bootcamp covering modern JavaScript concepts, ES6+, DOM manipulation, asynchronous programming, and real-world frontend development fundamentals.",
-
       link: javascriptCert,
-
       skills: [
         "JavaScript",
         "ES6+",
@@ -28,12 +25,9 @@ export default function Certifications() {
     {
       title: "Git & GitHub",
       provider: "LetsUpgrade",
-
       description:
         "Hands-on certification focused on Git workflows, version control systems, repository management, branching, collaboration, and professional development practices.",
-
       link: gitCert,
-
       skills: [
         "Git",
         "GitHub",
@@ -46,12 +40,9 @@ export default function Certifications() {
     {
       title: "HTML & CSS Bootcamp",
       provider: "LetsUpgrade",
-
       description:
         "Built strong foundations in semantic HTML, responsive layouts, Flexbox, Grid systems, and modern CSS styling techniques for professional web development.",
-
       link: htmlCssCert,
-
       skills: [
         "HTML5",
         "CSS3",
@@ -64,12 +55,9 @@ export default function Certifications() {
     {
       title: "CSS (Basic)",
       provider: "HackerRank",
-
       description:
         "Certified in CSS fundamentals including selectors, layouts, spacing systems, responsive design principles, and modern styling best practices.",
-
       link: cssHackerrankCert,
-
       skills: [
         "CSS",
         "Responsive UI",
@@ -83,79 +71,65 @@ export default function Certifications() {
   return (
     <section
       id="certifications"
-      className="relative overflow-hidden bg-[#020617] text-white py-24 px-5 sm:px-8 lg:px-16"
+      className="relative bg-[#0F1117] py-24 overflow-hidden"
     >
       {/* BACKGROUND */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:70px_70px]" />
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:70px_70px]" />
 
-        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-violet-600/20 blur-[120px] rounded-full" />
+        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-white/[0.02] blur-[120px] rounded-full" />
 
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan-500/20 blur-[120px] rounded-full" />
+        <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-white/[0.02] blur-[100px] rounded-full" />
       </div>
 
-      <div className="max-w-6xl mx-auto">
-        {/* SECTION HEADER */}
-        <div className="mb-16 text-center lg:text-left">
-          <p className="text-cyan-400 text-sm tracking-[0.3em] uppercase mb-4">
-            Achievements
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        {/* HEADER */}
+        <div className="mb-20">
+          <p className="text-sm uppercase tracking-[0.25em] text-[#71717A] mb-4">
+            Certifications
           </p>
 
-          <h2 className="text-4xl sm:text-5xl font-black leading-tight">
-            My{" "}
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
-              Certifications
-            </span>
+          <h2 className="text-4xl md:text-6xl font-black text-[#F8FAFC] leading-tight">
+            Verified Skills &
+            <br />
+            Credentials
           </h2>
+
+          <p className="mt-6 text-lg text-[#A1A1AA] max-w-3xl leading-relaxed">
+            Professional certifications and technical training that support my
+            expertise in frontend engineering, version control systems, and
+            modern web development practices.
+          </p>
         </div>
 
-        {/* CERTIFICATION GRID */}
+        {/* CERTIFICATIONS GRID */}
         <div className="grid md:grid-cols-2 gap-8">
           {certifications.map((cert, index) => (
             <div
               key={index}
               className="
-                relative overflow-hidden
-                rounded-[2rem]
-                border border-white/10
-                bg-white/5
-                backdrop-blur-2xl
-                p-6 sm:p-8
-                shadow-[0_20px_50px_rgba(0,0,0,0.45)]
-                hover:-translate-y-1
-                transition-all duration-500
                 group
+                relative
+                rounded-3xl
+                border border-[#272B35]
+                bg-[#161A22]
+                p-8
+                hover:border-[#3A4050]
+                transition-all duration-300
               "
             >
-              {/* CARD GLOW */}
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-violet-500/10 opacity-0 group-hover:opacity-100 transition duration-500" />
-
-              {/* ICON */}
-              <div
-                className="
-                  relative
-                  w-14 h-14 rounded-2xl
-                  flex items-center justify-center
-                  bg-gradient-to-br from-cyan-500 to-violet-600
-                  text-2xl
-                  shadow-[0_0_30px_rgba(59,130,246,0.35)]
-                  mb-6
-                "
-              >
-                <FaCertificate />
-              </div>
 
               {/* CONTENT */}
-              <div className="relative">
-                <h3 className="text-2xl font-bold text-white leading-snug">
-                  {cert.title}
-                </h3>
-
-                <p className="mt-2 text-cyan-400 font-semibold">
+              <div className="relative z-10">
+                <p className="text-sm uppercase tracking-wider text-[#71717A]">
                   {cert.provider}
                 </p>
 
-                <p className="mt-5 text-sm sm:text-base text-white/70 leading-relaxed">
+                <h3 className="text-2xl font-bold text-[#F8FAFC] mt-3">
+                  {cert.title}
+                </h3>
+
+                <p className="mt-5 text-[#A1A1AA] leading-relaxed">
                   {cert.description}
                 </p>
 
@@ -165,15 +139,12 @@ export default function Certifications() {
                     <span
                       key={skill}
                       className="
-                        px-3 py-1.5 rounded-full
-                        border border-white/10
-                        bg-white/5
-                        backdrop-blur-xl
-                        text-xs font-medium
-                        text-white/75
-                        hover:border-cyan-400/30
-                        hover:bg-white/10
-                        transition-all duration-300
+                        px-3 py-2
+                        rounded-lg
+                        bg-[#222734]
+                        border border-[#2B3140]
+                        text-xs
+                        text-[#E5E7EB]
                       "
                     >
                       {skill}
@@ -182,32 +153,63 @@ export default function Certifications() {
                 </div>
 
                 {/* BUTTON */}
-                <div className="mt-8">
-                  <a
-                    href={cert.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="
-                      inline-flex items-center justify-center gap-2
-                      px-5 py-3 rounded-xl
-                      bg-gradient-to-r from-cyan-500 to-violet-600
-                      text-sm font-semibold
-                      shadow-[0_0_30px_rgba(59,130,246,0.35)]
-                      hover:scale-[1.03]
-                      transition-all duration-300
-                    "
-                  >
-                    <FaCertificate />
-
-                    View Certificate
-                  </a>
-                </div>
+                <a
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
+                    inline-flex
+                    items-center
+                    gap-2
+                    mt-8
+                    px-5 py-3
+                    rounded-xl
+                    bg-[#F8FAFC]
+                    text-[#0F1117]
+                    font-semibold
+                    hover:translate-y-[-2px]
+                    transition
+                  "
+                >
+                  <FaCertificate />
+                  View Certificate
+                </a>
               </div>
-
-              {/* CORNER GLOW */}
-              <div className="absolute -top-20 -right-20 w-40 h-40 bg-cyan-500/10 blur-3xl rounded-full" />
             </div>
           ))}
+        </div>
+
+        {/* FOOTER */}
+        <div className="grid sm:grid-cols-3 gap-6 mt-12">
+          <div className="bg-[#161A22] border border-[#272B35] rounded-2xl p-6">
+            <p className="text-[#71717A] text-sm mb-2">
+              Certifications
+            </p>
+
+            <h3 className="text-2xl font-bold text-[#F8FAFC]">
+              4+
+            </h3>
+          </div>
+
+          <div className="bg-[#161A22] border border-[#272B35] rounded-2xl p-6">
+            <p className="text-[#71717A] text-sm mb-2">
+              Focus Area
+            </p>
+
+            <h3 className="text-2xl font-bold text-[#F8FAFC]">
+              Web Development
+            </h3>
+          </div>
+
+          <div className="bg-[#161A22] border border-[#272B35] rounded-2xl p-6">
+            <p className="text-[#71717A] text-sm mb-2">
+              Learning Style
+            </p>
+
+            <h3 className="text-2xl font-bold text-[#F8FAFC]">
+              Continuous
+            </h3>
+          </div>
         </div>
       </div>
     </section>

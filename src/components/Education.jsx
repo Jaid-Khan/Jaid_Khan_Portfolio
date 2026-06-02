@@ -37,93 +37,93 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="relative overflow-hidden bg-[#020617] text-white py-24 px-5 sm:px-8 lg:px-16"
+      className="relative bg-[#0F1117] py-24 overflow-hidden"
     >
       {/* BACKGROUND */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:70px_70px]" />
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:70px_70px]" />
 
-        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-violet-600/20 blur-[120px] rounded-full" />
+        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-white/[0.02] blur-[120px] rounded-full" />
 
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan-500/20 blur-[120px] rounded-full" />
+        <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-white/[0.02] blur-[100px] rounded-full" />
       </div>
 
-      <div className="max-w-6xl mx-auto">
-        {/* SECTION HEADER */}
-        <div className="mb-16 text-center lg:text-left">
-          <p className="text-cyan-400 text-sm tracking-[0.3em] uppercase mb-4">
-            Academic Journey
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        {/* HEADER */}
+        <div className="mb-20">
+          <p className="text-sm uppercase tracking-[0.25em] text-[#71717A] mb-4">
+            Education
           </p>
 
-          <h2 className="text-4xl sm:text-5xl font-black leading-tight">
-            My{" "}
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
-              Education
-            </span>
+          <h2 className="text-4xl md:text-6xl font-black text-[#F8FAFC] leading-tight">
+            Academic
+            <br />
+            Foundation
           </h2>
+
+          <p className="mt-6 text-lg text-[#A1A1AA] max-w-3xl leading-relaxed">
+            My educational journey that shaped my technical foundations in
+            software development, computer science, networking, and engineering
+            principles.
+          </p>
         </div>
 
-        {/* EDUCATION CARDS */}
+        {/* EDUCATION LIST */}
         <div className="space-y-8">
           {educationData.map((item, index) => (
             <div
               key={index}
               className="
-                relative overflow-hidden
-                rounded-[2rem]
-                border border-white/10
-                bg-white/5
-                backdrop-blur-2xl
-                p-6 sm:p-8
-                shadow-[0_20px_50px_rgba(0,0,0,0.45)]
-                hover:-translate-y-1
-                transition-all duration-500
-                group
+                relative
+                rounded-3xl
+                border border-[#272B35]
+                bg-[#161A22]
+                p-8
+                hover:border-[#3A4050]
+                transition-all duration-300
               "
             >
-              {/* CARD GLOW */}
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-violet-500/10 opacity-0 group-hover:opacity-100 transition duration-500" />
 
-              <div className="relative flex flex-col lg:flex-row gap-8 lg:items-center">
+              <div className="flex flex-col lg:flex-row gap-8 lg:items-center">
                 {/* ICON */}
-                <div className="shrink-0 flex justify-center lg:justify-start">
+                <div className="shrink-0">
                   <div
                     className="
-                      w-24 h-24 sm:w-28 sm:h-28
+                      w-24 h-24
                       rounded-3xl
+                      border border-[#2B3140]
+                      bg-[#222734]
                       flex items-center justify-center
-                      bg-gradient-to-br from-cyan-500 to-violet-600
-                      shadow-[0_0_40px_rgba(59,130,246,0.35)]
-                      group-hover:scale-105
-                      transition-all duration-300
                     "
                   >
                     <img
                       src={item.icon}
                       alt={item.degree}
-                      className="w-14 h-14 sm:w-16 sm:h-16 object-contain"
+                      className="w-14 h-14 object-contain"
                     />
                   </div>
                 </div>
 
                 {/* CONTENT */}
-                <div className="flex-1 text-center lg:text-left">
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white leading-snug">
+                <div className="flex-1">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-[#F8FAFC] leading-tight">
                     {item.degree}
                   </h3>
 
-                  <p className="mt-3 text-cyan-400 font-semibold text-base sm:text-lg">
+                  <p className="mt-3 text-[#E5E7EB] font-medium">
                     {item.institute}
                   </p>
 
-                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 mt-4 justify-center lg:justify-start">
+                  {/* META */}
+                  <div className="flex flex-wrap gap-3 mt-5">
                     <div
                       className="
-                        inline-flex items-center justify-center
-                        px-4 py-2 rounded-full
-                        border border-white/10
-                        bg-white/5
-                        text-sm text-white/70
+                        px-4 py-2
+                        rounded-lg
+                        border border-[#2B3140]
+                        bg-[#222734]
+                        text-sm
+                        text-[#A1A1AA]
                       "
                     >
                       {item.duration}
@@ -131,11 +131,12 @@ export default function Education() {
 
                     <div
                       className="
-                        inline-flex items-center justify-center
-                        px-4 py-2 rounded-full
-                        bg-cyan-500/10
-                        border border-cyan-400/20
-                        text-cyan-300 text-sm font-semibold
+                        px-4 py-2
+                        rounded-lg
+                        bg-[#F8FAFC]
+                        text-[#0F1117]
+                        text-sm
+                        font-semibold
                       "
                     >
                       {item.score}
@@ -143,19 +144,17 @@ export default function Education() {
                   </div>
 
                   {/* HIGHLIGHTS */}
-                  <div className="flex flex-wrap gap-3 mt-6 justify-center lg:justify-start">
+                  <div className="flex flex-wrap gap-3 mt-6">
                     {item.highlights.map((highlight) => (
                       <span
                         key={highlight}
                         className="
-                          px-4 py-2 rounded-full
-                          border border-white/10
-                          bg-white/5
-                          backdrop-blur-xl
-                          text-sm text-white/75
-                          hover:border-cyan-400/30
-                          hover:bg-white/10
-                          transition-all duration-300
+                          px-4 py-2
+                          rounded-lg
+                          bg-[#222734]
+                          border border-[#2B3140]
+                          text-sm
+                          text-[#E5E7EB]
                         "
                       >
                         {highlight}
@@ -164,11 +163,41 @@ export default function Education() {
                   </div>
                 </div>
               </div>
-
-              {/* CORNER GLOW */}
-              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-cyan-500/10 blur-3xl rounded-full" />
             </div>
           ))}
+        </div>
+
+        {/* FOOTER STATS */}
+        <div className="grid sm:grid-cols-3 gap-6 mt-12">
+          <div className="bg-[#161A22] border border-[#272B35] rounded-2xl p-6">
+            <p className="text-[#71717A] text-sm mb-2">
+              Highest Qualification
+            </p>
+
+            <h3 className="text-xl font-bold text-[#F8FAFC]">
+              B.Tech CSE
+            </h3>
+          </div>
+
+          <div className="bg-[#161A22] border border-[#272B35] rounded-2xl p-6">
+            <p className="text-[#71717A] text-sm mb-2">
+              University
+            </p>
+
+            <h3 className="text-xl font-bold text-[#F8FAFC]">
+              RGPV Bhopal
+            </h3>
+          </div>
+
+          <div className="bg-[#161A22] border border-[#272B35] rounded-2xl p-6">
+            <p className="text-[#71717A] text-sm mb-2">
+              Academic Focus
+            </p>
+
+            <h3 className="text-xl font-bold text-[#F8FAFC]">
+              CS + Engineering
+            </h3>
+          </div>
         </div>
       </div>
     </section>
