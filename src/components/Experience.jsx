@@ -1,8 +1,4 @@
-import {
-  FaNetworkWired,
-  FaCertificate,
-  FaReact,
-} from "react-icons/fa";
+import { FaNetworkWired, FaCertificate, FaReact } from "react-icons/fa";
 
 import {
   SiMongodb,
@@ -18,8 +14,54 @@ export default function Experience() {
   const experiences = [
     {
       role: "MERN Stack Developer Intern",
+      company: "Zaalima Development Pvt. Ltd.",
+      duration: "Mar 2026 – Present",
+      icon: <FaReact />,
+
+      description:
+        "Worked as a MERN Stack Developer Intern on production-oriented web applications, enterprise platforms, authentication systems, AI-powered solutions, and scalable backend services. Contributed across the full development lifecycle including frontend engineering, API development, database design, application architecture, deployment workflows, and feature implementation.",
+
+      responsibilities: [
+        "Developed full-stack MERN applications using React.js, Node.js, Express.js, and MongoDB",
+        "Built responsive user interfaces with reusable component architecture and Tailwind CSS",
+        "Designed and integrated RESTful APIs, authentication systems, and protected routes",
+        "Implemented JWT-based authentication, authorization, and role-based access control workflows",
+        "Worked on database schema design, CRUD operations, validation, and backend business logic",
+        "Integrated third-party APIs and AI-powered functionalities into enterprise applications",
+        "Collaborated on scalable application architecture, code optimization, and production-ready development practices",
+        "Participated in debugging, testing, feature enhancements, and deployment workflows",
+      ],
+
+      skills: [
+        {
+          name: "React.js",
+          icon: <FaReact />,
+        },
+        {
+          name: "Node.js",
+          icon: <SiNodedotjs />,
+        },
+        {
+          name: "Express.js",
+          icon: <SiExpress />,
+        },
+        {
+          name: "MongoDB",
+          icon: <SiMongodb />,
+        },
+        {
+          name: "Tailwind CSS",
+          icon: <SiTailwindcss />,
+        },
+      ],
+
+      performance:
+  "Top Performer • Delivered Enterprise MERN & AI-Powered Applications",
+    },
+    {
+      role: "MERN Stack Developer Intern",
       company: "SkyRoute Solution",
-      duration: "Jul 2025 – Nov 2025 · Remote Internship",
+      duration: "Jul 2025 – Nov 2025",
       icon: <FaReact />,
       description:
         "Completed a 4-month MERN Stack Development internship focused on modern frontend development, REST API integration, scalable application architecture, and real-world full stack development workflows.",
@@ -94,182 +136,234 @@ export default function Experience() {
 return (
   <section
     id="experience"
-    className="bg-[#0F1117] py-10"
+    className="py-24 bg-[#070d1a] relative overflow-hidden"
   >
-    <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    {/* Background Grid */}
+    <div
+      className="
+        absolute inset-0 opacity-[0.03]
+        bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)]
+        bg-[size:40px_40px]
+      "
+    />
+
+    <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
       {/* HEADER */}
       <div className="mb-20">
-        <p className="text-sm uppercase tracking-[0.25em] text-[#A1A1AA] mb-4">
+        <p className="text-sm uppercase tracking-[0.25em] text-[#fca311]/80 mb-4">
           Career Journey
         </p>
 
-        <h2 className="text-4xl md:text-6xl font-black text-[#F8FAFC] leading-tight">
+        <h2 className="text-5xl md:text-7xl font-black text-white leading-none">
           Professional
           <br />
           Experience
         </h2>
 
-        <p className="mt-6 text-lg text-[#A1A1AA] max-w-3xl leading-relaxed">
-          Professional experience across full-stack development,
-          enterprise software engineering, networking infrastructure,
-          and production-focused technology environments.
+        <p className="mt-8 max-w-3xl text-lg text-[#cfd6e6]/75 leading-relaxed">
+          Professional experience across full-stack development, enterprise
+          software engineering, networking infrastructure, and
+          production-focused technology environments.
         </p>
       </div>
 
-      {/* EXPERIENCE LIST */}
-      <div className="space-y-8">
-        {experiences.map((exp, index) => (
-          <div
-            key={index}
-            className="
-              bg-[#161A22]
-              border border-[#272B35]
-              rounded-3xl
-              p-8 lg:p-10
-              transition-all duration-300
-              hover:border-[#343B49]
-            "
-          >
-            {/* TOP */}
-            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-8">
-              <div className="flex gap-5">
-                <div
-                  className="
-                    w-14 h-14
-                    rounded-2xl
-                    bg-[#222734]
-                    border border-[#2B3140]
-                    flex items-center justify-center
-                    text-[#F8FAFC]
-                    text-xl
-                    shrink-0
-                  "
-                >
-                  {exp.icon}
-                </div>
+      {/* TIMELINE */}
+      <div className="relative">
+        {/* Line */}
+        <div className="absolute left-6 top-0 bottom-0 w-px bg-white/10" />
 
-                <div>
-                  <h3 className="text-2xl font-bold text-[#F8FAFC]">
-                    {exp.role}
-                  </h3>
-
-                  <p className="mt-1 text-[#D4D4D8] font-medium">
-                    {exp.company}
-                  </p>
-
-                  <p className="mt-2 text-sm text-[#A1A1AA]">
-                    {exp.duration}
-                  </p>
-                </div>
+        <div className="space-y-16">
+          {experiences.map((exp, index) => (
+            <div
+              key={index}
+              className="relative pl-20"
+            >
+              {/* Timeline Dot */}
+              <div
+                className="
+                  absolute left-0 top-2
+                  w-12 h-12
+                  rounded-2xl
+                  bg-[#fca311]
+                  flex items-center justify-center
+                  text-black
+                  text-lg
+                  font-bold
+                  shadow-[0_0_25px_rgba(252,163,17,0.35)]
+                "
+              >
+                {exp.icon}
               </div>
 
-              {exp.certificate && (
-                <a
-                  href={exp.certificate.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="
-                    inline-flex items-center gap-2
-                    px-5 py-3
-                    rounded-xl
-                    bg-[#222734]
-                    border border-[#2B3140]
-                    text-[#F8FAFC]
-                    text-sm font-semibold
-                    hover:border-[#434C5E]
-                    transition
-                  "
-                >
-                  <FaCertificate />
-
-                  {exp.certificate.label}
-                </a>
-              )}
-            </div>
-
-            {/* DESCRIPTION */}
-            <p className="text-[#A1A1AA] leading-relaxed mb-8">
-              {exp.description}
-            </p>
-
-            {/* RESPONSIBILITIES */}
-            <div className="mb-8">
-              <h4 className="text-[#F8FAFC] font-semibold mb-5">
-                Key Responsibilities
-              </h4>
-
-              <div className="grid md:grid-cols-2 gap-4">
-                {exp.responsibilities.map((item, i) => (
-                  <div
-                    key={i}
-                    className="
-                      flex items-start gap-3
-                      p-4
-                      rounded-2xl
-                      bg-[#222734]
-                      border border-[#2B3140]
-                    "
-                  >
-                    <span className="w-2 h-2 rounded-full bg-[#F8FAFC] mt-2 shrink-0" />
-
-                    <p className="text-sm text-[#D4D4D8] leading-relaxed">
-                      {item}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* SKILLS */}
-            {exp.skills && (
-              <div className="mb-8">
-                <h4 className="text-[#F8FAFC] font-semibold mb-5">
-                  Technologies & Skills
-                </h4>
-
-                <div className="flex flex-wrap gap-3">
-                  {exp.skills.map((skill) => (
-                    <div
-                      key={skill.name}
+              {/* Content */}
+              <div
+                className="
+                  bg-[#0b1220]
+                  border border-white/10
+                  rounded-3xl
+                  p-8
+                  hover:border-[#fca311]/30
+                  hover:shadow-[0_0_30px_rgba(252,163,17,0.08)]
+                  transition-all duration-300
+                "
+              >
+                {/* TOP */}
+                <div className="flex flex-col lg:flex-row lg:justify-between gap-6 mb-6">
+                  <div>
+                    <span
                       className="
-                        flex items-center gap-2
-                        px-4 py-2
-                        rounded-xl
-                        bg-[#222734]
-                        border border-[#2B3140]
-                        text-[#E5E7EB]
-                        text-sm
+                        inline-flex
+                        px-3 py-1
+                        rounded-full
+                        bg-[#fca311]/10
+                        border border-[#fca311]/20
+                        text-[#fca311]
+                        text-xs
+                        uppercase
+                        tracking-[0.15em]
+                        font-semibold
+                        mb-4
                       "
                     >
-                      <span className="text-base">
-                        {skill.icon}
-                      </span>
+                      {exp.duration}
+                    </span>
 
-                      {skill.name}
+                    <h3 className="text-2xl font-bold text-white">
+                      {exp.role}
+                    </h3>
+
+                    <p className="text-[#cfd6e6] mt-2">
+                      {exp.company}
+                    </p>
+                  </div>
+
+                  {exp.certificate && (
+                    <a
+                      href={exp.certificate.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
+                        h-fit
+                        inline-flex items-center gap-2
+                        px-5 py-3
+                        rounded-xl
+                        bg-[#070d1a]
+                        border border-white/10
+                        text-white
+                        text-sm
+                        font-semibold
+                        hover:border-[#fca311]/40
+                        hover:text-[#fca311]
+                        transition
+                      "
+                    >
+                      <FaCertificate />
+                      {exp.certificate.label}
+                    </a>
+                  )}
+                </div>
+
+                {/* Description */}
+                <p className="text-[#cfd6e6]/75 leading-relaxed mb-8">
+                  {exp.description}
+                </p>
+
+                {/* Responsibilities */}
+                <div className="grid md:grid-cols-2 gap-4 mb-8">
+                  {exp.responsibilities.map((item, i) => (
+                    <div
+                      key={i}
+                      className="
+                        flex items-start gap-3
+                        p-4
+                        rounded-2xl
+                        bg-[#070d1a]
+                        border border-white/10
+                      "
+                    >
+                      <span className="w-2 h-2 rounded-full bg-[#fca311] mt-2 shrink-0" />
+
+                      <p className="text-sm text-[#cfd6e6]/85">
+                        {item}
+                      </p>
                     </div>
                   ))}
                 </div>
+
+                {/* Skills */}
+                {exp.skills && (
+                  <div className="flex flex-wrap gap-3 mb-8">
+                    {exp.skills.map((skill) => (
+                      <div
+                        key={skill.name}
+                        className="
+                          flex items-center gap-2
+                          px-4 py-2
+                          rounded-xl
+                          bg-[#070d1a]
+                          border border-white/10
+                          text-[#fca311]
+                          text-sm
+                          font-medium
+                        "
+                      >
+                        {skill.icon}
+                        {skill.name}
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* Performance */}
+                <div
+                  className="
+                    inline-flex items-center gap-3
+                    px-5 py-3
+                    rounded-xl
+                    bg-[#fca311]/10
+                    border border-[#fca311]/20
+                    text-[#fca311]
+                    text-sm
+                    font-semibold
+                  "
+                >
+                  <div className="w-2 h-2 rounded-full bg-[#fca311]" />
+                  {exp.performance}
+                </div>
               </div>
-            )}
-
-            {/* PERFORMANCE */}
-            <div
-              className="
-                inline-flex items-center gap-3
-                px-4 py-3
-                rounded-xl
-                bg-[#222734]
-                border border-[#2B3140]
-                text-[#F8FAFC]
-                text-sm font-medium
-              "
-            >
-              <div className="w-2 h-2 rounded-full bg-[#F8FAFC]" />
-
-              {exp.performance}
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+      </div>
+
+      {/* STATS */}
+      <div className="mt-20 grid md:grid-cols-3 gap-6">
+        <div className="border border-white/10 rounded-3xl p-8 bg-[#0b1220]">
+          <p className="text-[#cfd6e6]/60 text-sm mb-2">
+            Industry Experience
+          </p>
+          <h3 className="text-4xl font-black text-[#fca311]">
+            3+
+          </h3>
+        </div>
+
+        <div className="border border-white/10 rounded-3xl p-8 bg-[#0b1220]">
+          <p className="text-[#cfd6e6]/60 text-sm mb-2">
+            Core Domain
+          </p>
+          <h3 className="text-4xl font-black text-[#fca311]">
+            MERN + AI
+          </h3>
+        </div>
+
+        <div className="border border-white/10 rounded-3xl p-8 bg-[#0b1220]">
+          <p className="text-[#cfd6e6]/60 text-sm mb-2">
+            Organizations
+          </p>
+          <h3 className="text-4xl font-black text-[#fca311]">
+            3
+          </h3>
+        </div>
       </div>
     </div>
   </section>

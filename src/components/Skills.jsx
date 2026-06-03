@@ -68,7 +68,7 @@ export default function Skills() {
     },
 
     {
-      title: "Database & MERN",
+      title: "Database & AI Systems",
       skills: [
         { name: "MongoDB", icon: <SiMongodb /> },
         { name: "Mongoose", icon: <SiMongoose /> },
@@ -77,7 +77,7 @@ export default function Skills() {
         { name: "MERN Stack", icon: <FaReact /> },
         { name: "API Integration", icon: <TbApi /> },
         { name: "Project Architecture", icon: <FaServer /> },
-        { name: "OpsMind AI", icon: <TbApi /> },
+        { name: "Vector Search", icon: <FaDatabase /> },
       ],
     },
 
@@ -99,25 +99,34 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-10 bg-[#0F1117]"
+      className="py-24 bg-[#070d1a] relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      {/* Background Grid */}
+      <div
+        className="
+          absolute inset-0 opacity-[0.03]
+          bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)]
+          bg-[size:40px_40px]
+        "
+      />
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         {/* HEADER */}
-        <div className="mb-24">
-          <p className="text-sm uppercase tracking-[0.25em] text-[#A1A1AA] mb-4">
-            Capabilities
+        <div className="mb-20">
+          <p className="text-sm uppercase tracking-[0.25em] text-[#fca311]/80 mb-4">
+            Core Technologies
           </p>
 
-          <h2 className="text-5xl md:text-7xl font-black text-[#F8FAFC] leading-none">
-            Technologies
+          <h2 className="text-5xl md:text-7xl font-black text-white leading-none">
+            Engineering
             <br />
-            & Skills
+            Stack
           </h2>
 
-          <p className="mt-8 max-w-3xl text-lg text-[#A1A1AA] leading-relaxed">
-            Building scalable full-stack applications, backend systems,
-            AI-powered products, and developer tooling with a focus on
-            performance, maintainability, and production-ready architecture.
+          <p className="mt-8 max-w-3xl text-lg text-[#cfd6e6]/75 leading-relaxed">
+            Technologies, frameworks, and tools used to build scalable web
+            applications, backend systems, AI-powered products, and developer
+            platforms.
           </p>
         </div>
 
@@ -127,43 +136,49 @@ export default function Skills() {
             <div
               key={category.title}
               className="
-                bg-[#161A22]
-                border border-[#272B35]
+                group
+                bg-[#070d1a]
+                border border-white/10
                 rounded-3xl
                 p-8
-                hover:border-[#3A4150]
+                hover:border-[#fca311]/30
+                hover:shadow-[0_0_25px_rgba(252,163,17,0.08)]
                 transition-all duration-300
               "
             >
-              {/* TOP */}
-              <div className="flex justify-between items-start mb-8">
-                <div>
-                  <h3 className="text-2xl font-bold text-[#F8FAFC]">
-                    {category.title}
-                  </h3>
-                </div>
-
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold text-white group-hover:text-[#fca311] transition">
+                  {category.title}
+                </h3>
               </div>
 
-              {/* SKILLS */}
               <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill) => (
                   <div
                     key={skill.name}
                     className="
+                      group/skill
                       flex items-center gap-2
                       px-4 py-2.5
                       rounded-xl
-                      bg-[#222734]
-                      border border-[#2B3140]
-                      text-[#E5E7EB]
+                      bg-black/20
+                      border border-white/10
+                      text-[#cfd6e6]
                       text-sm
-                      hover:border-[#3F4759]
-                      hover:bg-[#262D3C]
+                      hover:border-[#fca311]/40
+                      hover:bg-black/40
+                      hover:text-white
                       transition-all duration-300
                     "
                   >
-                    <span className="text-base text-[#F8FAFC]">
+                    <span
+                      className="
+                        text-base
+                        text-[#fca311]
+                        group-hover/skill:scale-110
+                        transition
+                      "
+                    >
                       {skill.icon}
                     </span>
 
@@ -176,33 +191,63 @@ export default function Skills() {
         </div>
 
         {/* STATS */}
-        <div className="mt-10 grid sm:grid-cols-3 gap-6">
-          <div className="bg-[#161A22] border border-[#272B35] rounded-3xl p-6">
-            <p className="text-[#A1A1AA] text-sm mb-2">
-              Primary Stack
+        <div className="mt-12 grid sm:grid-cols-3 gap-6">
+          <div
+            className="
+              bg-[#070d1a]
+              border border-white/10
+              rounded-3xl
+              p-6
+              hover:border-[#fca311]/30
+              hover:shadow-[0_0_20px_rgba(252,163,17,0.08)]
+              transition
+            "
+          >
+            <p className="text-[#cfd6e6]/60 text-sm mb-2">
+              Core Stack
             </p>
 
-            <h3 className="text-2xl font-bold text-[#F8FAFC]">
+            <h3 className="text-3xl font-bold text-[#fca311]">
               MERN
             </h3>
           </div>
 
-          <div className="bg-[#161A22] border border-[#272B35] rounded-3xl p-6">
-            <p className="text-[#A1A1AA] text-sm mb-2">
-              Focus Area
+          <div
+            className="
+              bg-[#070d1a]
+              border border-white/10
+              rounded-3xl
+              p-6
+              hover:border-[#fca311]/30
+              hover:shadow-[0_0_20px_rgba(252,163,17,0.08)]
+              transition
+            "
+          >
+            <p className="text-[#cfd6e6]/60 text-sm mb-2">
+              Specialization
             </p>
 
-            <h3 className="text-2xl font-bold text-[#F8FAFC]">
-              Backend + AI
+            <h3 className="text-3xl font-bold text-[#fca311]">
+              AI Systems
             </h3>
           </div>
 
-          <div className="bg-[#161A22] border border-[#272B35] rounded-3xl p-6">
-            <p className="text-[#A1A1AA] text-sm mb-2">
+          <div
+            className="
+              bg-[#070d1a]
+              border border-white/10
+              rounded-3xl
+              p-6
+              hover:border-[#fca311]/30
+              hover:shadow-[0_0_20px_rgba(252,163,17,0.08)]
+              transition
+            "
+          >
+            <p className="text-[#cfd6e6]/60 text-sm mb-2">
               Experience
             </p>
 
-            <h3 className="text-2xl font-bold text-[#F8FAFC]">
+            <h3 className="text-3xl font-bold text-[#fca311]">
               1+ Years
             </h3>
           </div>

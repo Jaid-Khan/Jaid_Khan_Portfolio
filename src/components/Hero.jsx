@@ -1,4 +1,4 @@
-import heroImg from "../assets/Jaid-Khan-IMG.png";
+import heroImg from "../assets/Jaid_Khan_IMG.png";
 
 export default function Hero() {
   const scrollToSection = (id) => {
@@ -8,67 +8,74 @@ export default function Hero() {
   };
 
   return (
-    <section className="bg-[#0F1117] flex items-center">
-      <div className="max-w-7xl mx-auto w-full px-6 lg:px-12 py-10">
-        <div className="grid lg:grid-cols-[1.3fr_0.7fr] gap-16 items-center">
+    <section className="bg-[#070d1a] flex items-center relative overflow-hidden">
+      {/* Background Grid */}
+      <div
+        className="
+          absolute inset-0 opacity-[0.03]
+          bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)]
+          bg-[size:40px_40px]
+        "
+      />
 
+      {/* subtle ambient glow */}
+      <div className="absolute inset-0 " />
+
+      <div className="max-w-7xl mx-auto w-full px-6 lg:px-12 py-10 relative z-10">
+        <div className="grid lg:grid-cols-[1.3fr_0.7fr] gap-16 items-center">
           {/* LEFT */}
           <div>
-            <h1 className="text-5xl md:text-7xl font-black tracking-tight text-[#F8FAFC] leading-[0.95]">
+            <h1 className="text-5xl md:text-7xl font-black tracking-tight text-white leading-[0.95]">
               Building
               <br />
               software that
               <br />
               solves real
               <br />
-              problems.
+              <span className="text-[#fca311]">problems.</span>
             </h1>
 
-            <p className="mt-8 text-lg md:text-xl text-[#A1A1AA] max-w-2xl leading-relaxed">
-              I build AI-powered developer tools, enterprise knowledge systems,
+            <p className="mt-8 text-lg md:text-xl text-[#cfd6e6]/75 max-w-2xl leading-relaxed">
+              I'm <span className="text-white font-semibold">Jaid Khan</span>, I build AI-powered developer tools, enterprise knowledge systems,
               backend services, and production-ready web applications using
               modern JavaScript technologies.
             </p>
 
             {/* PROJECTS */}
-            <div className="mt-12 border-t border-[#272B35] pt-8">
-              <p className="text-sm uppercase tracking-wider text-[#A1A1AA] mb-6">
+            <div className="mt-12 border-t border-white/10 pt-8">
+              <p className="text-sm uppercase tracking-wider text-[#fca311]/80 mb-6">
                 Active Systems
               </p>
 
-              <div className="space-y-5">
-                <div>
-                  <h3 className="font-bold text-xl text-[#F8FAFC]">
-                    GitGuard AI
-                  </h3>
-
-                  <p className="text-[#A1A1AA]">
-                    Automated pull request review system powered by GitHub
-                    webhooks and AI.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-bold text-xl text-[#F8FAFC]">
-                    OpsMind AI
-                  </h3>
-
-                  <p className="text-[#A1A1AA]">
-                    Enterprise RAG assistant with semantic retrieval and
-                    citation-based responses.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-bold text-xl text-[#F8FAFC]">
-                    Recruitment Platform
-                  </h3>
-
-                  <p className="text-[#A1A1AA]">
-                    Complete hiring workflow automation with role-based access
-                    control.
-                  </p>
-                </div>
+              <div className="space-y-6">
+                {[
+                  [
+                    "GitGuard AI",
+                    "Automated pull request review system powered by GitHub webhooks and AI.",
+                  ],
+                  [
+                    "OpsMind AI",
+                    "Enterprise RAG assistant with semantic retrieval and citation-based responses.",
+                  ],
+                  [
+                    "Recruitment Platform",
+                    "Complete hiring workflow automation with role-based access control.",
+                  ],
+                ].map(([title, desc]) => (
+                  <div
+                    key={title}
+                    className="
+                      group
+                      hover:translate-x-1
+                      transition
+                    "
+                  >
+                    <h3 className="font-bold text-xl text-white group-hover:text-[#fca311] transition">
+                      {title}
+                    </h3>
+                    <p className="text-[#cfd6e6]/70">{desc}</p>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -78,11 +85,12 @@ export default function Hero() {
                 onClick={() => scrollToSection("projects")}
                 className="
                   px-7 py-4
-                  bg-[#F8FAFC]
-                  text-[#0F1117]
+                  bg-[#fca311]
+                  text-black
                   rounded-xl
                   font-semibold
-                  hover:translate-y-[-2px]
+                  hover:scale-[1.04]
+                  hover:shadow-[0_0_25px_rgba(252,163,17,0.35)]
                   transition
                 "
               >
@@ -93,11 +101,12 @@ export default function Hero() {
                 onClick={() => scrollToSection("contact")}
                 className="
                   px-7 py-4
-                  border border-[#272B35]
+                  border border-white/15
                   rounded-xl
                   font-semibold
-                  text-[#F8FAFC]
-                  hover:bg-[#161A22]
+                  text-white
+                  hover:bg-white/10
+                  hover:border-[#fca311]/40
                   transition
                 "
               >
@@ -108,47 +117,79 @@ export default function Hero() {
 
           {/* RIGHT */}
           <div>
-            <div className="border border-[#272B35] bg-[#161A22] rounded-3xl p-6">
-              <img
-                src={heroImg}
-                alt="Jaid Khan"
-                className="w-full h-[400px] object-cover rounded-2xl"
-              />
+            <div
+              className="
+    border border-white/10
+    rounded-2xl
+    p-6
+    shadow-2xl
+    shadow-[#070d1a]
+    hover:shadow-[#fca311]/10
+    transition
+  "
+            >
+             <img
+  src={heroImg}
+  alt="Jaid Khan"
+  className="
+    w-full
+    h-auto
+    max-h-[500px]
+    object-contain
+    object-center
+    rounded-2xl
+
+    drop-shadow-[0_20px_40px_rgba(0,0,0,0.45)]
+
+    transform-gpu
+    transition-all
+    duration-700
+
+    hover:-translate-y-1
+    hover:scale-[1.01]
+  "
+/>
 
               <div className="mt-6">
-                <div className="flex justify-between py-3 border-b border-[#272B35]">
-                  <span className="text-[#A1A1AA]">Role</span>
-                  <span className="font-semibold text-[#F8FAFC]">
-                    Software Engineer
-                  </span>
-                </div>
+                {[
+                  ["Role", "Software Engineer"],
+                  ["Focus", "AI + Backend"],
+                  ["Experience", "1+ Years"],
+                  ["Stack", "MERN + AI Systems"],
+                ].map(([label, value]) => (
+                  <div
+                    key={label}
+                    className="
+            flex justify-between py-4
+            border-b border-white/10
+            hover:bg-white/5
+            px-2
+            transition
+          "
+                  >
+                    {/* label stays muted */}
+                    <span className="text-[#cfd6e6]/60">{label}</span>
 
-                <div className="flex justify-between py-3 border-b border-[#272B35]">
-                  <span className="text-[#A1A1AA]">Focus</span>
-                  <span className="font-semibold text-[#F8FAFC]">
-                    AI + Backend
-                  </span>
-                </div>
-
-                <div className="flex justify-between py-3 border-b border-[#272B35]">
-                  <span className="text-[#A1A1AA]">Experience</span>
-                  <span className="font-semibold text-[#F8FAFC]">
-                    1+ Years
-                  </span>
-                </div>
-
-                <div className="flex justify-between py-3">
-                  <span className="text-[#A1A1AA]">Stack</span>
-                  <span className="font-semibold text-[#F8FAFC]">
-                    MERN + AI Systems
-                  </span>
-                </div>
+                    {/* value becomes yellow highlight */}
+                    <span className="text-[#fca311] font-semibold">
+                      {value}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
 
             {/* CURRENT FOCUS */}
-            <div className="mt-6 border border-[#272B35] rounded-2xl p-5 bg-[#161A22]">
-              <p className="text-sm uppercase tracking-wider text-[#A1A1AA] mb-4">
+            <div
+              className="
+    mt-6
+    border border-white/10
+    bg-[#070d1a]
+    rounded-2xl
+    p-5
+  "
+            >
+              <p className="text-sm uppercase tracking-wider text-[#fca311]/80 mb-4">
                 Current Focus
               </p>
 
@@ -162,13 +203,17 @@ export default function Hero() {
                   <span
                     key={item}
                     className="
-                      px-3 py-2
-                      rounded-lg
-                      bg-[#222734]
-                      text-sm
-                      text-[#E5E7EB]
-                      border border-[#2B3140]
-                    "
+            px-3 py-2
+            bg-black/30
+            text-[#cfd6e6]
+            border border-white/10
+            rounded-lg
+            text-sm
+            hover:border-[#fca311]/50
+            hover:text-[#fca311]
+            hover:bg-black/50
+            transition
+          "
                   >
                     {item}
                   </span>
@@ -176,7 +221,6 @@ export default function Hero() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>

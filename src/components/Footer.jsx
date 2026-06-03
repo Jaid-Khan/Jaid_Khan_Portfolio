@@ -9,167 +9,216 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-[#0F1117] py-24"
+      className="py-24 bg-[#070d1a] relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      {/* Background Grid */}
+      <div
+        className="
+          absolute inset-0 opacity-[0.03]
+          bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)]
+          bg-[size:40px_40px]
+        "
+      />
+
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* HEADER */}
-        <div className="mb-20">
-          <p className="text-sm uppercase tracking-[0.25em] text-[#A1A1AA] mb-4">
+        <div className="text-center max-w-4xl mx-auto">
+          <p className="text-sm uppercase tracking-[0.25em] text-[#fca311]/80 mb-6">
             Contact
           </p>
 
-          <h2 className="text-4xl md:text-6xl font-black text-[#F8FAFC] leading-tight">
-            Let's build
+          <h2 className="text-5xl md:text-7xl font-black text-white leading-[0.95]">
+            Let's Build
             <br />
-            something useful.
+            <span className="text-[#fca311]">Something Great</span>
           </h2>
 
-          <p className="mt-6 max-w-3xl text-lg text-[#A1A1AA] leading-relaxed">
-            Open to MERN Stack, Full Stack, Backend Development,
-            and AI Application opportunities. Feel free to reach out
-            if you'd like to discuss projects, roles, collaborations,
-            or software engineering opportunities.
+          <p className="mt-8 text-lg text-[#cfd6e6]/75 leading-relaxed">
+            Open to MERN Stack, Full Stack, Backend Development, and
+            AI Application opportunities. Whether it's a job opportunity,
+            freelance project, startup idea, or technical collaboration,
+            I'd love to hear from you.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-8">
-          {/* LEFT */}
-          <div className="space-y-6">
-            <div className="border border-[#272B35] bg-[#161A22] rounded-3xl p-7">
-              <p className="text-sm uppercase tracking-wider text-[#71717A] mb-3">
+        {/* MAIN CARD */}
+        <div
+          className="
+            mt-16
+            border border-white/10
+            rounded-3xl
+            bg-black/10
+            p-8 md:p-12
+            hover:border-[#fca311]/30
+            transition-all duration-300
+          "
+        >
+          {/* CONTACT METHODS */}
+          <div className="grid md:grid-cols-2 gap-6">
+            <a
+              href="mailto:jaidkhan04072001@gmail.com"
+              className="
+                group
+                p-8
+                rounded-3xl
+                border border-white/10
+                bg-black/10
+                hover:border-[#fca311]/30
+                transition-all duration-300
+              "
+            >
+              <div
+                className="
+                  w-16 h-16
+                  rounded-2xl
+                  bg-[#fca311]/10
+                  border border-[#fca311]/20
+                  flex items-center justify-center
+                  text-[#fca311]
+                  text-2xl
+                  mb-5
+                "
+              >
+                <FaEnvelope />
+              </div>
+
+              <p className="text-[#fca311] text-sm uppercase tracking-wider mb-2">
                 Email
               </p>
 
-              <a
-                href="mailto:jaidkhan04072001@gmail.com"
-                className="text-[#F8FAFC] text-lg font-semibold hover:text-white"
-              >
+              <h3 className="text-xl font-bold text-white break-all">
                 jaidkhan04072001@gmail.com
-              </a>
-            </div>
+              </h3>
+            </a>
 
-            <div className="border border-[#272B35] bg-[#161A22] rounded-3xl p-7">
-              <p className="text-sm uppercase tracking-wider text-[#71717A] mb-3">
+            <a
+              href="tel:+918871104006"
+              className="
+                group
+                p-8
+                rounded-3xl
+                border border-white/10
+                bg-black/10
+                hover:border-[#fca311]/30
+                transition-all duration-300
+              "
+            >
+              <div
+                className="
+                  w-16 h-16
+                  rounded-2xl
+                  bg-[#fca311]/10
+                  border border-[#fca311]/20
+                  flex items-center justify-center
+                  text-[#fca311]
+                  text-2xl
+                  mb-5
+                "
+              >
+                <FaPhoneAlt />
+              </div>
+
+              <p className="text-[#fca311] text-sm uppercase tracking-wider mb-2">
                 Phone
               </p>
 
-              <a
-                href="tel:+918871104006"
-                className="text-[#F8FAFC] text-lg font-semibold hover:text-white"
-              >
+              <h3 className="text-xl font-bold text-white">
                 +91 8871104006
-              </a>
-            </div>
-
-            <div className="border border-[#272B35] bg-[#161A22] rounded-3xl p-7">
-              <p className="text-sm uppercase tracking-wider text-[#71717A] mb-4">
-                Social Links
-              </p>
-
-              <div className="flex gap-4">
-                <a
-                  href="https://github.com/Jaid-Khan"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="
-                    w-12 h-12
-                    rounded-xl
-                    border border-[#272B35]
-                    flex items-center justify-center
-                    text-[#F8FAFC]
-                    hover:bg-[#202632]
-                    transition
-                  "
-                >
-                  <FaGithub />
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/in/jaid-khan/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="
-                    w-12 h-12
-                    rounded-xl
-                    border border-[#272B35]
-                    flex items-center justify-center
-                    text-[#F8FAFC]
-                    hover:bg-[#202632]
-                    transition
-                  "
-                >
-                  <FaLinkedin />
-                </a>
-
-                <a
-                  href="mailto:jaidkhan04072001@gmail.com"
-                  className="
-                    w-12 h-12
-                    rounded-xl
-                    border border-[#272B35]
-                    flex items-center justify-center
-                    text-[#F8FAFC]
-                    hover:bg-[#202632]
-                    transition
-                  "
-                >
-                  <FaEnvelope />
-                </a>
-              </div>
-            </div>
+              </h3>
+            </a>
           </div>
 
-          {/* RIGHT */}
-          <div className="border border-[#272B35] bg-[#161A22] rounded-3xl p-10 flex flex-col justify-between">
-            <div>
-              <p className="text-sm uppercase tracking-wider text-[#71717A] mb-3">
-                Current Focus
-              </p>
+          {/* SOCIAL LINKS */}
+          <div className="mt-10 flex justify-center gap-5">
+            <a
+              href="https://github.com/Jaid-Khan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                w-16 h-16
+                rounded-2xl
+                border border-white/10
+                bg-black/10
+                flex items-center justify-center
+                text-white
+                text-xl
+                hover:border-[#fca311]/30
+                hover:text-[#fca311]
+                transition-all duration-300
+              "
+            >
+              <FaGithub />
+            </a>
 
-              <h3 className="text-3xl font-black text-[#F8FAFC] mb-6">
-                Backend Engineering,
-                AI Applications &
-                Developer Tools
+            <a
+              href="https://www.linkedin.com/in/jaid-khan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                w-16 h-16
+                rounded-2xl
+                border border-white/10
+                bg-black/10
+                flex items-center justify-center
+                text-white
+                text-xl
+                hover:border-[#fca311]/30
+                hover:text-[#fca311]
+                transition-all duration-300
+              "
+            >
+              <FaLinkedin />
+            </a>
+
+            <a
+              href="mailto:jaidkhan04072001@gmail.com"
+              className="
+                w-16 h-16
+                rounded-2xl
+                border border-white/10
+                bg-black/10
+                flex items-center justify-center
+                text-white
+                text-xl
+                hover:border-[#fca311]/30
+                hover:text-[#fca311]
+                transition-all duration-300
+              "
+            >
+              <FaEnvelope />
+            </a>
+          </div>
+
+          {/* STATS */}
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
+            <div className="border-t border-[#fca311]/20 pt-6">
+              <h3 className="text-4xl font-black text-[#fca311]">
+                MERN
               </h3>
 
-              <p className="text-[#A1A1AA] text-lg leading-relaxed">
-                Currently building production-focused systems using
-                React.js, Node.js, Express.js, MongoDB, REST APIs,
-                Retrieval-Augmented Generation (RAG), and AI-powered
-                developer tooling.
+              <p className="mt-2 text-[#cfd6e6]/60">
+                Full Stack Development
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-3 gap-5 mt-12">
-              <div className="border border-[#272B35] rounded-2xl p-5">
-                <h4 className="text-xl font-bold text-[#F8FAFC]">
-                  MERN
-                </h4>
+            <div className="border-t border-[#fca311]/20 pt-6">
+              <h3 className="text-4xl font-black text-[#fca311]">
+                AI
+              </h3>
 
-                <p className="text-[#A1A1AA] mt-2 text-sm">
-                  Primary Stack
-                </p>
-              </div>
+              <p className="mt-2 text-[#cfd6e6]/60">
+                RAG & LLM Systems
+              </p>
+            </div>
 
-              <div className="border border-[#272B35] rounded-2xl p-5">
-                <h4 className="text-xl font-bold text-[#F8FAFC]">
-                  AI
-                </h4>
+            <div className="border-t border-[#fca311]/20 pt-6">
+              <h3 className="text-4xl font-black text-[#fca311]">
+                APIs
+              </h3>
 
-                <p className="text-[#A1A1AA] mt-2 text-sm">
-                  Applications
-                </p>
-              </div>
-
-              <div className="border border-[#272B35] rounded-2xl p-5">
-                <h4 className="text-xl font-bold text-[#F8FAFC]">
-                  APIs
-                </h4>
-
-                <p className="text-[#A1A1AA] mt-2 text-sm">
-                  Backend Systems
-                </p>
-              </div>
+              <p className="mt-2 text-[#cfd6e6]/60">
+                Backend Engineering
+              </p>
             </div>
           </div>
         </div>

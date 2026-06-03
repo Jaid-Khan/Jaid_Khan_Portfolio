@@ -10,8 +10,6 @@ export default function Certifications() {
     {
       title: "JavaScript Bootcamp",
       provider: "LetsUpgrade",
-      description:
-        "Completed an intensive JavaScript Bootcamp covering modern JavaScript concepts, ES6+, DOM manipulation, asynchronous programming, and real-world frontend development fundamentals.",
       link: javascriptCert,
       skills: [
         "JavaScript",
@@ -25,8 +23,6 @@ export default function Certifications() {
     {
       title: "Git & GitHub",
       provider: "LetsUpgrade",
-      description:
-        "Hands-on certification focused on Git workflows, version control systems, repository management, branching, collaboration, and professional development practices.",
       link: gitCert,
       skills: [
         "Git",
@@ -40,8 +36,6 @@ export default function Certifications() {
     {
       title: "HTML & CSS Bootcamp",
       provider: "LetsUpgrade",
-      description:
-        "Built strong foundations in semantic HTML, responsive layouts, Flexbox, Grid systems, and modern CSS styling techniques for professional web development.",
       link: htmlCssCert,
       skills: [
         "HTML5",
@@ -55,8 +49,6 @@ export default function Certifications() {
     {
       title: "CSS (Basic)",
       provider: "HackerRank",
-      description:
-        "Certified in CSS fundamentals including selectors, layouts, spacing systems, responsive design principles, and modern styling best practices.",
       link: cssHackerrankCert,
       skills: [
         "CSS",
@@ -71,142 +63,182 @@ export default function Certifications() {
   return (
     <section
       id="certifications"
-      className="relative bg-[#0F1117] py-24 overflow-hidden"
+      className="py-24 bg-[#070d1a] relative overflow-hidden"
     >
-      {/* BACKGROUND */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:70px_70px]" />
-
-        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-white/[0.02] blur-[120px] rounded-full" />
-
-        <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-white/[0.02] blur-[100px] rounded-full" />
-      </div>
+      {/* Grid */}
+      <div
+        className="
+          absolute inset-0 opacity-[0.03]
+          bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)]
+          bg-[size:40px_40px]
+        "
+      />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         {/* HEADER */}
         <div className="mb-20">
-          <p className="text-sm uppercase tracking-[0.25em] text-[#71717A] mb-4">
-            Certifications
+          <p className="text-sm uppercase tracking-[0.25em] text-[#fca311]/80 mb-4">
+            Credentials
           </p>
 
-          <h2 className="text-4xl md:text-6xl font-black text-[#F8FAFC] leading-tight">
-            Verified Skills &
+          <h2 className="text-5xl md:text-7xl font-black text-white leading-none">
+            Verified
             <br />
-            Credentials
+            Skills
           </h2>
 
-          <p className="mt-6 text-lg text-[#A1A1AA] max-w-3xl leading-relaxed">
-            Professional certifications and technical training that support my
-            expertise in frontend engineering, version control systems, and
-            modern web development practices.
+          <p className="mt-8 max-w-3xl text-lg text-[#cfd6e6]/75 leading-relaxed">
+            Industry-recognized certifications validating my knowledge of
+            modern web development, frontend engineering, version control,
+            and software development workflows.
           </p>
         </div>
 
-        {/* CERTIFICATIONS GRID */}
-        <div className="grid md:grid-cols-2 gap-8">
+        {/* CERTIFICATION WALL */}
+        <div className="space-y-6">
           {certifications.map((cert, index) => (
             <div
               key={index}
               className="
                 group
-                relative
-                rounded-3xl
-                border border-[#272B35]
-                bg-[#161A22]
+                flex flex-col lg:flex-row
+                lg:items-center
+                justify-between
+                gap-8
                 p-8
-                hover:border-[#3A4050]
-                transition-all duration-300
+                border-b
+                border-white/10
+                hover:border-[#fca311]/30
+                transition-all
               "
             >
-
-              {/* CONTENT */}
-              <div className="relative z-10">
-                <p className="text-sm uppercase tracking-wider text-[#71717A]">
-                  {cert.provider}
-                </p>
-
-                <h3 className="text-2xl font-bold text-[#F8FAFC] mt-3">
-                  {cert.title}
-                </h3>
-
-                <p className="mt-5 text-[#A1A1AA] leading-relaxed">
-                  {cert.description}
-                </p>
-
-                {/* SKILLS */}
-                <div className="flex flex-wrap gap-2 mt-6">
-                  {cert.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="
-                        px-3 py-2
-                        rounded-lg
-                        bg-[#222734]
-                        border border-[#2B3140]
-                        text-xs
-                        text-[#E5E7EB]
-                      "
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-
-                {/* BUTTON */}
-                <a
-                  href={cert.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+              {/* LEFT */}
+              <div className="flex items-start gap-6">
+                {/* <div
                   className="
-                    inline-flex
-                    items-center
-                    gap-2
-                    mt-8
-                    px-5 py-3
-                    rounded-xl
-                    bg-[#F8FAFC]
-                    text-[#0F1117]
-                    font-semibold
-                    hover:translate-y-[-2px]
-                    transition
+                    text-5xl
+                    md:text-6xl
+                    font-black
+                    text-[#fca311]/20
+                    min-w-[80px]
                   "
                 >
-                  <FaCertificate />
-                  View Certificate
-                </a>
+                  {String(index + 1).padStart(2, "0")}
+                </div> */}
+
+                <div>
+                  <p className="text-sm uppercase tracking-[0.2em] text-[#fca311] mb-2">
+                    {cert.provider}
+                  </p>
+
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                    {cert.title}
+                  </h3>
+
+                  <div className="flex flex-wrap gap-2">
+                    {cert.skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="
+                          px-3 py-2
+                          rounded-xl
+                          bg-black/20
+                          border border-white/10
+                          text-[#cfd6e6]
+                          text-sm
+                        "
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
+
+              {/* RIGHT */}
+              <a
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  inline-flex
+                  items-center
+                  justify-center
+                  gap-3
+                  px-6
+                  py-3
+                  rounded-xl
+                  bg-[#fca311]
+                  text-black
+                  font-semibold
+                  hover:scale-[1.03]
+                  hover:shadow-[0_0_25px_rgba(252,163,17,0.35)]
+                  transition
+                  shrink-0
+                "
+              >
+                <FaCertificate />
+                View Certificate
+              </a>
             </div>
           ))}
         </div>
 
-        {/* FOOTER */}
-        <div className="grid sm:grid-cols-3 gap-6 mt-12">
-          <div className="bg-[#161A22] border border-[#272B35] rounded-2xl p-6">
-            <p className="text-[#71717A] text-sm mb-2">
+        {/* STATS */}
+        <div className="mt-20 grid md:grid-cols-3 gap-6">
+          <div
+            className="
+              bg-[#070d1a]
+              border border-white/10
+              rounded-3xl
+              p-8
+              hover:border-[#fca311]/30
+              transition
+            "
+          >
+            <p className="text-[#cfd6e6]/60 text-sm mb-2">
               Certifications
             </p>
 
-            <h3 className="text-2xl font-bold text-[#F8FAFC]">
+            <h3 className="text-4xl font-black text-[#fca311]">
               4+
             </h3>
           </div>
 
-          <div className="bg-[#161A22] border border-[#272B35] rounded-2xl p-6">
-            <p className="text-[#71717A] text-sm mb-2">
+          <div
+            className="
+              bg-[#070d1a]
+              border border-white/10
+              rounded-3xl
+              p-8
+              hover:border-[#fca311]/30
+              transition
+            "
+          >
+            <p className="text-[#cfd6e6]/60 text-sm mb-2">
               Focus Area
             </p>
 
-            <h3 className="text-2xl font-bold text-[#F8FAFC]">
-              Web Development
+            <h3 className="text-4xl font-black text-[#fca311]">
+              Frontend
             </h3>
           </div>
 
-          <div className="bg-[#161A22] border border-[#272B35] rounded-2xl p-6">
-            <p className="text-[#71717A] text-sm mb-2">
-              Learning Style
+          <div
+            className="
+              bg-[#070d1a]
+              border border-white/10
+              rounded-3xl
+              p-8
+              hover:border-[#fca311]/30
+              transition
+            "
+          >
+            <p className="text-[#cfd6e6]/60 text-sm mb-2">
+              Learning Mindset
             </p>
 
-            <h3 className="text-2xl font-bold text-[#F8FAFC]">
+            <h3 className="text-4xl font-black text-[#fca311]">
               Continuous
             </h3>
           </div>

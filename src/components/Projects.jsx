@@ -28,7 +28,34 @@ export default function Projects() {
       github: "https://github.com/Jaid-Khan/OpsMind-AI",
       demo: "",
     },
-
+    {
+      title: "GitGuard AI — Automated Pull Request Sentinel",
+      category: "AI Developer Platform",
+      description:
+        "Built an AI-powered GitHub code review platform that automatically analyzes pull requests, detects bugs, security vulnerabilities, performance issues, code quality concerns, and provides intelligent review feedback directly inside GitHub pull requests.",
+      highlights: [
+        "Implemented GitHub webhook-driven architecture for automated PR analysis",
+        "Built AI-powered review engine using Groq and Llama 3.1",
+        "Developed intelligent diff processing and changed-file analysis pipeline",
+        "Implemented automated GitHub review comments and inline feedback system",
+        "Built repository-level review settings with Strict Mode and filtering controls",
+        "Created analytics dashboard with review history, severity tracking, repository insights, and review metrics",
+      ],
+      tech: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "GitHub Webhooks",
+        "Octokit",
+        "Groq API",
+        "Llama 3.1",
+        "AI Code Review",
+        "Tailwind CSS",
+      ],
+      github: "https://github.com/Jaid-Khan/Git_Guard",
+      demo: "",
+    },
     {
       title: "Government Job Portal & Recruitment Management System",
       category: "Full-Stack MERN Platform",
@@ -53,14 +80,11 @@ export default function Projects() {
         "Mongoose",
         "CSS3",
       ],
-      github:
-        "https://github.com/Jaid-Khan/Job_Portal_Frontend",
-      github2:
-        "https://github.com/Jaid-Khan/Job_Portal_Backend",
+      github: "https://github.com/Jaid-Khan/Job_Portal_Frontend",
+      github2: "https://github.com/Jaid-Khan/Job_Portal_Backend",
       demo: "https://alwaysonlinejobs.netlify.app/",
       admin: "https://alwaysonlinejobs.netlify.app/admin",
     },
-
     {
       title: "University Management System",
       category: "Role-Based MERN Application",
@@ -84,8 +108,7 @@ export default function Projects() {
         "bcrypt",
         "REST APIs",
       ],
-      github:
-        "https://github.com/Jaid-Khan/University-Management-System",
+      github: "https://github.com/Jaid-Khan/University-Management-System",
       demo: "https://universitymanagementsystems.netlify.app/login",
     },
 
@@ -114,195 +137,232 @@ export default function Projects() {
     },
   ];
 
-return (
-  <section
-    id="projects"
-    className="bg-[#0F1117] py-10"
-  >
-    <div className="max-w-7xl mx-auto px-6 lg:px-12">
-      {/* HEADER */}
-      <div className="mb-20">
-        <p className="text-sm uppercase tracking-[0.25em] text-[#A1A1AA] mb-4">
-          Portfolio
-        </p>
+  return (
+    <section
+      id="projects"
+      className="bg-[#070d1a] py-24 relative overflow-hidden"
+    >
 
-        <h2 className="text-4xl md:text-6xl font-black text-[#F8FAFC] leading-tight">
-          Selected
-          <br />
-          Projects
-        </h2>
+        {/* Background Grid */}
+      <div
+        className="
+          absolute inset-0 opacity-[0.03]
+          bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)]
+          bg-[size:40px_40px]
+        "
+      />
 
-        <p className="mt-6 text-lg text-[#A1A1AA] max-w-3xl leading-relaxed">
-          Production-focused systems, AI applications, backend platforms,
-          and scalable MERN stack products built with real-world engineering
-          practices.
-        </p>
-      </div>
+      <div className="absolute inset-0 " />
 
-      {/* PROJECTS */}
-      <div className="space-y-8">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="
-              bg-[#161A22]
-              border border-[#272B35]
-              rounded-3xl
-              p-8 lg:p-10
-              transition-all duration-300
-              hover:border-[#343B49]
-            "
-          >
-            {/* TOP */}
-            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-8">
-              <div className="max-w-4xl">
-                <p className="text-sm uppercase tracking-[0.2em] text-[#A1A1AA] mb-3">
-                  {project.category}
-                </p>
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        {/* HEADER */}
+        <div className="mb-20">
+          <p className="text-sm uppercase tracking-[0.25em] text-[#fca311]/80 mb-4">
+            Featured Work
+          </p>
 
-                <h3 className="text-2xl lg:text-3xl font-bold text-[#F8FAFC] leading-tight">
-                  {project.title}
-                </h3>
-              </div>
+          <h2 className="text-5xl md:text-7xl font-black text-white leading-[0.95]">
+            Products
+            <br />& <span className="text-[#fca311]">Platforms</span>
+          </h2>
 
-              <div
-                className="
-                  w-12 h-12
-                  rounded-2xl
-                  border border-[#272B35]
-                  bg-[#0F1117]
-                  flex items-center justify-center
-                  text-[#F8FAFC]
-                  font-bold
-                  shrink-0
-                "
-              >
-                {String(index + 1).padStart(2, "0")}
-              </div>
-            </div>
+          <p className="mt-8 text-lg text-[#cfd6e6]/75 max-w-3xl leading-relaxed">
+            Production-focused systems, AI applications, backend platforms, and
+            scalable MERN stack products built with real-world engineering
+            practices.
+          </p>
+        </div>
 
-            {/* DESCRIPTION */}
-            <p className="text-[#A1A1AA] leading-relaxed mb-8 max-w-5xl">
-              {project.description}
-            </p>
+        {/* PROJECTS */}
+        <div className="space-y-8">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="
+                bg-[#0b1220]
+                border border-white/10
+                rounded-3xl
+                p-8 lg:p-10
+                transition-all duration-300
+                hover:border-[#fca311]/30
+                hover:shadow-[0_0_40px_rgba(252,163,17,0.08)]
+              "
+            >
+              {/* TOP */}
+              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-8">
+                <div className="max-w-4xl">
+                  <span
+                    className="
+                      inline-flex
+                      px-3 py-1
+                      rounded-full
+                      bg-[#fca311]/10
+                      border border-[#fca311]/20
+                      text-[#fca311]
+                      text-xs
+                      uppercase
+                      tracking-[0.15em]
+                      font-semibold
+                      mb-4
+                    "
+                  >
+                    {project.category}
+                  </span>
 
-            {/* HIGHLIGHTS */}
-            <div className="grid md:grid-cols-2 gap-4 mb-8">
-              {project.highlights.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-start gap-3"
-                >
-                  <span className="w-2 h-2 rounded-full bg-[#F8FAFC] mt-2 shrink-0" />
-
-                  <p className="text-[#D4D4D8] text-sm leading-relaxed">
-                    {item}
-                  </p>
+                  <h3 className="text-2xl lg:text-3xl font-bold text-white leading-tight">
+                    {project.title}
+                  </h3>
                 </div>
-              ))}
-            </div>
 
-            {/* TECH STACK */}
-            <div className="flex flex-wrap gap-3 mb-8">
-              {project.tech.map((tech) => (
-                <span
-                  key={tech}
+                <div
                   className="
-                    px-4 py-2
+                    w-14 h-14
+                    rounded-2xl
+                    border border-[#fca311]/20
+                    bg-[#070d1a]
+                    flex items-center justify-center
+                    text-[#fca311]
+                    font-bold
+                    text-lg
+                    shrink-0
+                  "
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </div>
+              </div>
+
+              {/* DESCRIPTION */}
+              <p className="text-[#cfd6e6]/75 leading-relaxed mb-8 max-w-5xl">
+                {project.description}
+              </p>
+
+              {/* HIGHLIGHTS */}
+              <div className="grid md:grid-cols-2 gap-4 mb-8">
+                {project.highlights.map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-[#fca311] mt-2 shrink-0" />
+
+                    <p className="text-[#cfd6e6]/85 text-sm leading-relaxed">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* TECH STACK */}
+              <div className="flex flex-wrap gap-3 mb-8">
+                {project.tech.map((tech) => (
+                  <span
+                    key={tech}
+                    className="
+                      px-4 py-2
+                      rounded-xl
+                      bg-[#070d1a]
+                      border border-white/10
+                      text-[#fca311]
+                      text-sm
+                      font-medium
+                      hover:border-[#fca311]/40
+                      hover:bg-[#fca311]/5
+                      transition
+                    "
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {/* BUTTONS */}
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
+                    px-5 py-3
                     rounded-xl
-                    bg-[#222734]
-                    border border-[#2B3140]
-                    text-[#E5E7EB]
+                    bg-[#070d1a]
+                    border border-white/10
+                    text-white
                     text-sm
+                    font-semibold
+                    hover:border-[#fca311]/40
+                    hover:text-[#fca311]
+                    transition
                   "
                 >
-                  {tech}
-                </span>
-              ))}
+                  GitHub
+                </a>
+
+                {project.github2 && (
+                  <a
+                    href={project.github2}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                      px-5 py-3
+                      rounded-xl
+                      bg-[#070d1a]
+                      border border-white/10
+                      text-white
+                      text-sm
+                      font-semibold
+                      hover:border-[#fca311]/40
+                      hover:text-[#fca311]
+                      transition
+                    "
+                  >
+                    Backend Repo
+                  </a>
+                )}
+
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                      px-5 py-3
+                      rounded-xl
+                      bg-[#fca311]
+                      text-black
+                      text-sm
+                      font-semibold
+                      hover:scale-[1.03]
+                      hover:shadow-[0_0_25px_rgba(252,163,17,0.35)]
+                      transition
+                    "
+                  >
+                    Live Demo
+                  </a>
+                )}
+
+                {project.admin && (
+                  <a
+                    href={project.admin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                      px-5 py-3
+                      rounded-xl
+                      border border-white/10
+                      text-white
+                      text-sm
+                      font-semibold
+                      hover:border-[#fca311]/40
+                      hover:text-[#fca311]
+                      hover:bg-[#070d1a]
+                      transition
+                    "
+                  >
+                    Admin Panel
+                  </a>
+                )}
+              </div>
             </div>
-
-            {/* BUTTONS */}
-            <div className="flex flex-wrap gap-4">
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-                  px-5 py-3
-                  rounded-xl
-                  bg-[#222734]
-                  border border-[#2B3140]
-                  text-[#F8FAFC]
-                  text-sm font-semibold
-                  hover:border-[#434C5E]
-                  transition
-                "
-              >
-                GitHub
-              </a>
-
-              {project.github2 && (
-                <a
-                  href={project.github2}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="
-                    px-5 py-3
-                    rounded-xl
-                    bg-[#222734]
-                    border border-[#2B3140]
-                    text-[#F8FAFC]
-                    text-sm font-semibold
-                    hover:border-[#434C5E]
-                    transition
-                  "
-                >
-                  Backend Repo
-                </a>
-              )}
-
-              {project.demo && (
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="
-                    px-5 py-3
-                    rounded-xl
-                    bg-[#F8FAFC]
-                    text-[#0F1117]
-                    text-sm font-semibold
-                    hover:opacity-90
-                    transition
-                  "
-                >
-                  Live Demo
-                </a>
-              )}
-
-              {project.admin && (
-                <a
-                  href={project.admin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="
-                    px-5 py-3
-                    rounded-xl
-                    border border-[#2B3140]
-                    text-[#F8FAFC]
-                    text-sm font-semibold
-                    hover:bg-[#222734]
-                    transition
-                  "
-                >
-                  Admin Panel
-                </a>
-              )}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
 }

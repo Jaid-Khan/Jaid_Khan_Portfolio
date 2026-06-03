@@ -8,181 +8,182 @@ export default function About() {
   return (
     <section
       id="about"
-      className="bg-[#0F1117] py-24"
+      className="py-24 bg-[#070d1a] relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        {/* HEADER */}
-        <div className="mb-20">
-          <p className="text-sm uppercase tracking-[0.25em] text-[#A1A1AA] mb-4">
-            About
-          </p>
+      {/* Background Grid */}
+      <div
+        className="
+          absolute inset-0 opacity-[0.03]
+          bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)]
+          bg-[size:40px_40px]
+        "
+      />
 
-          <h2 className="text-4xl md:text-6xl font-black text-[#F8FAFC] leading-tight">
-            Building software
-            <br />
-            for real-world use.
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        {/* SECTION LABEL */}
+        <p className="text-sm uppercase tracking-[0.25em] text-[#fca311]/80 mb-6">
+          About Me
+        </p>
+
+        {/* BIG STATEMENT */}
+        <div className="max-w-5xl">
+          <h2 className="text-5xl md:text-7xl font-black text-white leading-[0.95]">
+            I build software that solves
+            <span className="text-[#fca311]"> real-world problems</span>,
+            from scalable backend systems to AI-powered developer tools.
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-12">
-          {/* LEFT */}
+        {/* STORY SECTION */}
+        <div className="grid lg:grid-cols-2 gap-16 mt-20">
           <div>
-            <div className="space-y-7 text-lg leading-relaxed text-[#A1A1AA]">
-              <p>
-                I'm a MERN Stack Developer focused on building scalable
-                full-stack applications, backend services, AI-powered systems,
-                and modern web platforms using JavaScript technologies.
-              </p>
+            <p className="text-[#cfd6e6]/80 text-xl leading-relaxed">
+              My journey started in Electronics & Telecommunication
+              Engineering, where I developed a strong foundation in systems,
+              networking, and problem-solving. Over time, curiosity led me
+              toward software development and modern web technologies.
+            </p>
 
-              <p>
-                My journey started from Electronics &
-                Telecommunication Engineering and evolved into software
-                development through hands-on project building, internships,
-                backend engineering, and real-world product development.
-              </p>
+            <p className="mt-8 text-[#cfd6e6]/75 text-lg leading-relaxed">
+              Today, I specialize in MERN Stack Development with a growing
+              focus on backend engineering, scalable architectures, and AI
+              applications. I enjoy designing APIs, authentication systems,
+              databases, and developer-focused products that create measurable
+              value.
+            </p>
 
-              <p>
-                I enjoy designing APIs, authentication systems, database
-                architecture, reusable frontend systems, and developer-focused
-                tools that solve practical problems.
-              </p>
-
-              <p>
-                Recently, I've been working on AI-powered applications such as
-                OpsMind AI and GitGuard AI while expanding my expertise in
-                backend engineering, system design, PostgreSQL, Redis, Docker,
-                and scalable architectures.
-              </p>
-            </div>
-
-            <div className="mt-10 flex flex-wrap gap-3">
-              {[
-                "MERN Stack",
-                "Backend Engineering",
-                "REST APIs",
-                "MongoDB",
-                "AI Applications",
-                "System Design",
-                "Authentication",
-                "Developer Tools",
-              ].map((item) => (
-                <span
-                  key={item}
-                  className="
-                    px-4 py-2
-                    rounded-xl
-                    bg-[#161A22]
-                    border border-[#272B35]
-                    text-sm
-                    text-[#E4E4E7]
-                  "
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
+            <p className="mt-8 text-[#cfd6e6]/75 text-lg leading-relaxed">
+              Recently, I've been building AI-powered platforms like OpsMind AI
+              and GitGuard AI while deepening my expertise in PostgreSQL,
+              Redis, Docker, caching strategies, and production-grade backend
+              systems.
+            </p>
           </div>
 
-          {/* RIGHT */}
-          <div className="space-y-6">
-            {/* CARD 1 */}
-            <div className="border border-[#272B35] bg-[#161A22] rounded-3xl p-7">
-              <p className="text-sm uppercase tracking-wider text-[#71717A] mb-3">
-                Primary Focus
-              </p>
+          {/* HIGHLIGHT PANEL */}
+          <div
+            className="
+              border border-white/10
+              rounded-3xl
+              p-8
+              bg-black/10
+              hover:border-[#fca311]/30
+              transition
+            "
+          >
+            <div className="space-y-8">
+              <div>
+                <p className="text-[#fca311] text-sm uppercase tracking-wider mb-2">
+                  Primary Focus
+                </p>
 
-              <h3 className="text-2xl font-bold text-[#F8FAFC] mb-4">
-                Backend + AI Systems
-              </h3>
+                <h3 className="text-3xl font-bold text-white">
+                  Backend Engineering
+                </h3>
 
-              <p className="text-[#A1A1AA] leading-relaxed">
-                Building production-ready APIs, AI integrations,
-                authentication systems, database architectures, and scalable
-                backend workflows.
-              </p>
-            </div>
+                <p className="mt-3 text-[#cfd6e6]/75 leading-relaxed">
+                  REST APIs, authentication systems, databases,
+                  scalable architectures, and production-ready services.
+                </p>
+              </div>
 
-            {/* CARD 2 */}
-            <div className="border border-[#272B35] bg-[#161A22] rounded-3xl p-7">
-              <p className="text-sm uppercase tracking-wider text-[#71717A] mb-3">
-                Current Learning
-              </p>
+              <div>
+                <p className="text-[#fca311] text-sm uppercase tracking-wider mb-2">
+                  Current Learning
+                </p>
 
-              <h3 className="text-2xl font-bold text-[#F8FAFC] mb-4">
-                Scaling Applications
-              </h3>
+                <h3 className="text-3xl font-bold text-white">
+                  Scaling Systems
+                </h3>
 
-              <p className="text-[#A1A1AA] leading-relaxed">
-                Exploring PostgreSQL, Redis, Docker, caching strategies,
-                scalable backend architecture, and production deployment
-                workflows.
-              </p>
-            </div>
+                <p className="mt-3 text-[#cfd6e6]/75 leading-relaxed">
+                  PostgreSQL, Redis, Docker, caching,
+                  system design, and cloud-native architectures.
+                </p>
+              </div>
 
-            {/* CTA */}
-            <div className="border border-[#272B35] bg-[#161A22] rounded-3xl p-7">
-              <p className="text-sm uppercase tracking-wider text-[#71717A] mb-3">
-                Open To
-              </p>
+              <div>
+                <p className="text-[#fca311] text-sm uppercase tracking-wider mb-2">
+                  Open To
+                </p>
 
-              <h3 className="text-2xl font-bold text-[#F8FAFC] mb-4">
-                MERN, Full Stack &
-                Backend Opportunities
-              </h3>
+                <h3 className="text-3xl font-bold text-white">
+                  MERN • Full Stack • Backend Roles
+                </h3>
 
-              <button
-                onClick={scrollToContact}
-                className="
-                  mt-2
-                  px-6 py-3
-                  bg-[#F8FAFC]
-                  text-[#0F1117]
-                  rounded-xl
-                  font-semibold
-                  hover:translate-y-[-2px]
-                  transition
-                "
-              >
-                Get In Touch
-              </button>
+                <button
+                  onClick={scrollToContact}
+                  className="
+                    mt-6
+                    px-6 py-3
+                    rounded-xl
+                    bg-[#fca311]
+                    text-black
+                    font-semibold
+                    hover:scale-[1.03]
+                    hover:shadow-[0_0_25px_rgba(252,163,17,0.35)]
+                    transition
+                  "
+                >
+                  Get In Touch
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* STATS */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+        {/* TECH TAGS */}
+        <div className="flex flex-wrap gap-4 mt-20">
           {[
-            {
-              value: "MERN",
-              label: "Primary Stack",
-            },
-            {
-              value: "AI",
-              label: "Applications",
-            },
-            {
-              value: "REST APIs",
-              label: "Backend Focus",
-            },
-            {
-              value: "1+ Years",
-              label: "Experience",
-            },
+            "MERN Stack",
+            "Backend Engineering",
+            "REST APIs",
+            "MongoDB",
+            "Node.js",
+            "Express.js",
+            "AI Applications",
+            "System Design",
+            "Authentication",
+            "Developer Tools",
+          ].map((item) => (
+            <span
+              key={item}
+              className="
+                px-5 py-3
+                rounded-2xl
+                border border-white/10
+                bg-black/10
+                text-[#cfd6e6]
+                hover:border-[#fca311]/30
+                hover:text-white
+                transition
+              "
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+
+        {/* LARGE STATS STRIP */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-20">
+          {[
+            { value: "1+", label: "Years Experience" },
+            { value: "10+", label: "Projects Built" },
+            { value: "MERN", label: "Core Stack" },
+            { value: "AI", label: "Specialization" },
           ].map((item) => (
             <div
               key={item.label}
               className="
-                border border-[#272B35]
-                bg-[#161A22]
-                rounded-3xl
-                p-6
+                border-t border-[#fca311]/20
+                pt-6
               "
             >
-              <h3 className="text-2xl font-bold text-[#F8FAFC]">
+              <h3 className="text-4xl font-black text-[#fca311]">
                 {item.value}
               </h3>
 
-              <p className="text-[#A1A1AA] mt-2">
+              <p className="mt-2 text-[#cfd6e6]/60">
                 {item.label}
               </p>
             </div>
@@ -192,3 +193,4 @@ export default function About() {
     </section>
   );
 }
+
