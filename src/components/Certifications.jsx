@@ -77,17 +77,17 @@ export default function Certifications() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         {/* HEADER */}
         <div className="mb-20">
-          <p className="text-sm uppercase tracking-[0.25em] text-[#fca311]/80 mb-4">
+          <p className="text-xs sm:text-sm uppercase tracking-[0.25em] text-[#fca311]/80 mb-4">
             Credentials
           </p>
 
-          <h2 className="text-5xl md:text-7xl font-black text-white leading-none">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-white leading-none">
             Verified
             <br />
             Skills
           </h2>
 
-          <p className="mt-8 max-w-3xl text-lg text-[#cfd6e6]/75 leading-relaxed">
+          <p className="mt-8 max-w-3xl text-base sm:text-lg text-[#cfd6e6]/75 leading-relaxed">
             Industry-recognized certifications validating my knowledge of
             modern web development, frontend engineering, version control,
             and software development workflows.
@@ -127,11 +127,11 @@ export default function Certifications() {
                 </div> */}
 
                 <div>
-                  <p className="text-sm uppercase tracking-[0.2em] text-[#fca311] mb-2">
+                  <p className="text-xs sm:text-sm uppercase tracking-[0.2em] text-[#fca311] mb-2">
                     {cert.provider}
                   </p>
 
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4">
                     {cert.title}
                   </h3>
 
@@ -145,7 +145,7 @@ export default function Certifications() {
                           bg-black/20
                           border border-white/10
                           text-[#cfd6e6]
-                          text-sm
+                          text-xs sm:text-sm
                         "
                       >
                         {skill}
@@ -170,6 +170,7 @@ export default function Certifications() {
                   rounded-xl
                   bg-[#fca311]
                   text-black
+                  text-xs sm:text-sm
                   font-semibold
                   hover:scale-[1.03]
                   hover:shadow-[0_0_25px_rgba(252,163,17,0.35)]
@@ -196,11 +197,11 @@ export default function Certifications() {
               transition
             "
           >
-            <p className="text-[#cfd6e6]/60 text-sm mb-2">
+            <p className="text-[#cfd6e6]/60 text-xs sm:text-sm mb-2">
               Certifications
             </p>
 
-            <h3 className="text-4xl font-black text-[#fca311]">
+            <h3 className="text-3xl sm:text-4xl font-black text-[#fca311]">
               4+
             </h3>
           </div>
@@ -215,11 +216,11 @@ export default function Certifications() {
               transition
             "
           >
-            <p className="text-[#cfd6e6]/60 text-sm mb-2">
+            <p className="text-[#cfd6e6]/60 text-xs sm:text-sm mb-2">
               Focus Area
             </p>
 
-            <h3 className="text-4xl font-black text-[#fca311]">
+            <h3 className="text-3xl sm:text-4xl font-black text-[#fca311]">
               Frontend
             </h3>
           </div>
@@ -234,11 +235,11 @@ export default function Certifications() {
               transition
             "
           >
-            <p className="text-[#cfd6e6]/60 text-sm mb-2">
+            <p className="text-[#cfd6e6]/60 text-xs sm:text-sm mb-2">
               Learning Mindset
             </p>
 
-            <h3 className="text-4xl font-black text-[#fca311]">
+            <h3 className="text-3xl sm:text-4xl font-black text-[#fca311]">
               Continuous
             </h3>
           </div>

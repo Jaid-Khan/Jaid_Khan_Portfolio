@@ -113,17 +113,17 @@ export default function Skills() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         {/* HEADER */}
         <div className="mb-20">
-          <p className="text-sm uppercase tracking-[0.25em] text-[#fca311]/80 mb-4">
+          <p className="text-xs sm:text-sm uppercase tracking-[0.25em] text-[#fca311]/80 mb-4">
             Core Technologies
           </p>
 
-          <h2 className="text-5xl md:text-7xl font-black text-white leading-none">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-white leading-none">
             Engineering
             <br />
             Stack
           </h2>
 
-          <p className="mt-8 max-w-3xl text-lg text-[#cfd6e6]/75 leading-relaxed">
+          <p className="mt-8 max-w-3xl text-base sm:text-lg text-[#cfd6e6]/75 leading-relaxed">
             Technologies, frameworks, and tools used to build scalable web
             applications, backend systems, AI-powered products, and developer
             platforms.
@@ -147,7 +147,7 @@ export default function Skills() {
               "
             >
               <div className="mb-8">
-                <h3 className="text-2xl font-bold text-white group-hover:text-[#fca311] transition">
+                <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-[#fca311] transition">
                   {category.title}
                 </h3>
               </div>
@@ -164,7 +164,7 @@ export default function Skills() {
                       bg-black/20
                       border border-white/10
                       text-[#cfd6e6]
-                      text-sm
+                      text-xs sm:text-sm
                       hover:border-[#fca311]/40
                       hover:bg-black/40
                       hover:text-white
@@ -173,7 +173,7 @@ export default function Skills() {
                   >
                     <span
                       className="
-                        text-base
+                        text-sm sm:text-base
                         text-[#fca311]
                         group-hover/skill:scale-110
                         transition
@@ -191,7 +191,7 @@ export default function Skills() {
         </div>
 
         {/* STATS */}
-        <div className="mt-12 grid sm:grid-cols-3 gap-6">
+        {/* <div className="mt-12 grid sm:grid-cols-3 gap-6">
           <div
             className="
               bg-[#070d1a]
@@ -203,11 +203,11 @@ export default function Skills() {
               transition
             "
           >
-            <p className="text-[#cfd6e6]/60 text-sm mb-2">
+            <p className="text-[#cfd6e6]/60 text-xs sm:text-sm mb-2">
               Core Stack
             </p>
 
-            <h3 className="text-3xl font-bold text-[#fca311]">
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#fca311]">
               MERN
             </h3>
           </div>
@@ -223,11 +223,11 @@ export default function Skills() {
               transition
             "
           >
-            <p className="text-[#cfd6e6]/60 text-sm mb-2">
+            <p className="text-[#cfd6e6]/60 text-xs sm:text-sm mb-2">
               Specialization
             </p>
 
-            <h3 className="text-3xl font-bold text-[#fca311]">
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#fca311]">
               AI Systems
             </h3>
           </div>
@@ -243,15 +243,15 @@ export default function Skills() {
               transition
             "
           >
-            <p className="text-[#cfd6e6]/60 text-sm mb-2">
+            <p className="text-[#cfd6e6]/60 text-xs sm:text-sm mb-2">
               Experience
             </p>
 
-            <h3 className="text-3xl font-bold text-[#fca311]">
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#fca311]">
               1+ Years
             </h3>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

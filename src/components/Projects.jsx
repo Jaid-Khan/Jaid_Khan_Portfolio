@@ -142,8 +142,7 @@ export default function Projects() {
       id="projects"
       className="bg-[#070d1a] py-24 relative overflow-hidden"
     >
-
-        {/* Background Grid */}
+      {/* Background Grid */}
       <div
         className="
           absolute inset-0 opacity-[0.03]
@@ -157,16 +156,16 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         {/* HEADER */}
         <div className="mb-20">
-          <p className="text-sm uppercase tracking-[0.25em] text-[#fca311]/80 mb-4">
+          <p className="text-xs sm:text-sm uppercase tracking-[0.25em] text-[#fca311]/80 mb-4">
             Featured Work
           </p>
 
-          <h2 className="text-5xl md:text-7xl font-black text-white leading-[0.95]">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-white leading-[0.95]">
             Products
             <br />& <span className="text-[#fca311]">Platforms</span>
           </h2>
 
-          <p className="mt-8 text-lg text-[#cfd6e6]/75 max-w-3xl leading-relaxed">
+          <p className="mt-8 text-base sm:text-lg text-[#cfd6e6]/75 max-w-3xl leading-relaxed">
             Production-focused systems, AI applications, backend platforms, and
             scalable MERN stack products built with real-world engineering
             practices.
@@ -209,12 +208,12 @@ export default function Projects() {
                     {project.category}
                   </span>
 
-                  <h3 className="text-2xl lg:text-3xl font-bold text-white leading-tight">
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white leading-tight">
                     {project.title}
                   </h3>
                 </div>
 
-                <div
+                {/* <div
                   className="
                     w-14 h-14
                     rounded-2xl
@@ -223,16 +222,16 @@ export default function Projects() {
                     flex items-center justify-center
                     text-[#fca311]
                     font-bold
-                    text-lg
+                    text-base sm:text-lg
                     shrink-0
                   "
                 >
                   {String(index + 1).padStart(2, "0")}
-                </div>
+                </div> */}
               </div>
 
               {/* DESCRIPTION */}
-              <p className="text-[#cfd6e6]/75 leading-relaxed mb-8 max-w-5xl">
+              <p className="text-sm sm:text-base text-[#cfd6e6]/75 leading-relaxed mb-8 max-w-5xl">
                 {project.description}
               </p>
 
@@ -242,7 +241,7 @@ export default function Projects() {
                   <div key={idx} className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-[#fca311] mt-2 shrink-0" />
 
-                    <p className="text-[#cfd6e6]/85 text-sm leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#cfd6e6]/85 leading-relaxed">
                       {item}
                     </p>
                   </div>
@@ -260,7 +259,7 @@ export default function Projects() {
                       bg-[#070d1a]
                       border border-white/10
                       text-[#fca311]
-                      text-sm
+                      text-xs sm:text-sm
                       font-medium
                       hover:border-[#fca311]/40
                       hover:bg-[#fca311]/5
@@ -284,7 +283,7 @@ export default function Projects() {
                     bg-[#070d1a]
                     border border-white/10
                     text-white
-                    text-sm
+                    text-xs sm:text-sm
                     font-semibold
                     hover:border-[#fca311]/40
                     hover:text-[#fca311]
@@ -305,7 +304,7 @@ export default function Projects() {
                       bg-[#070d1a]
                       border border-white/10
                       text-white
-                      text-sm
+                      text-xs sm:text-sm
                       font-semibold
                       hover:border-[#fca311]/40
                       hover:text-[#fca311]
@@ -326,7 +325,7 @@ export default function Projects() {
                       rounded-xl
                       bg-[#fca311]
                       text-black
-                      text-sm
+                      text-xs sm:text-sm
                       font-semibold
                       hover:scale-[1.03]
                       hover:shadow-[0_0_25px_rgba(252,163,17,0.35)]
@@ -347,7 +346,7 @@ export default function Projects() {
                       rounded-xl
                       border border-white/10
                       text-white
-                      text-sm
+                      text-xs sm:text-sm
                       font-semibold
                       hover:border-[#fca311]/40
                       hover:text-[#fca311]

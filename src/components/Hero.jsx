@@ -25,7 +25,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-[1.3fr_0.7fr] gap-16 items-center">
           {/* LEFT */}
           <div>
-            <h1 className="text-5xl md:text-7xl font-black tracking-tight text-white leading-[0.95]">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight text-white leading-[0.95]">
               Building
               <br />
               software that
@@ -35,15 +35,16 @@ export default function Hero() {
               <span className="text-[#fca311]">problems.</span>
             </h1>
 
-            <p className="mt-8 text-lg md:text-xl text-[#cfd6e6]/75 max-w-2xl leading-relaxed">
-              I'm <span className="text-white font-semibold">Jaid Khan</span>, I build AI-powered developer tools, enterprise knowledge systems,
+            <p className="mt-8 text-base sm:text-lg md:text-xl text-[#cfd6e6]/75 max-w-2xl leading-relaxed">
+              I'm <span className="text-white font-semibold">Jaid Khan</span>, I
+              build AI-powered developer tools, enterprise knowledge systems,
               backend services, and production-ready web applications using
               modern JavaScript technologies.
             </p>
 
             {/* PROJECTS */}
             <div className="mt-12 border-t border-white/10 pt-8">
-              <p className="text-sm uppercase tracking-wider text-[#fca311]/80 mb-6">
+              <p className="text-xs sm:text-sm uppercase tracking-wider text-[#fca311]/80 mb-6">
                 Active Systems
               </p>
 
@@ -70,10 +71,12 @@ export default function Hero() {
                       transition
                     "
                   >
-                    <h3 className="font-bold text-xl text-white group-hover:text-[#fca311] transition">
+                    <h3 className="font-bold text-lg sm:text-xl text-white group-hover:text-[#fca311] transition">
                       {title}
                     </h3>
-                    <p className="text-[#cfd6e6]/70">{desc}</p>
+                    <p className="text-sm sm:text-base text-[#cfd6e6]/70">
+                      {desc}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -87,6 +90,7 @@ export default function Hero() {
                   px-7 py-4
                   bg-[#fca311]
                   text-black
+                  text-sm sm:text-base
                   rounded-xl
                   font-semibold
                   hover:scale-[1.04]
@@ -104,6 +108,7 @@ export default function Hero() {
                   border border-white/15
                   rounded-xl
                   font-semibold
+                  text-sm sm:text-base
                   text-white
                   hover:bg-white/10
                   hover:border-[#fca311]/40
@@ -119,36 +124,33 @@ export default function Hero() {
           <div>
             <div
               className="
-    border border-white/10
-    rounded-2xl
-    p-6
-    shadow-2xl
-    shadow-[#070d1a]
-    hover:shadow-[#fca311]/10
-    transition
-  "
+                border border-white/10
+                rounded-2xl
+                p-6
+                shadow-2xl
+                shadow-[#070d1a]
+                hover:shadow-[#fca311]/10
+                transition
+              "
             >
-             <img
-  src={heroImg}
-  alt="Jaid Khan"
-  className="
-    w-full
-    h-auto
-    max-h-[500px]
-    object-contain
-    object-center
-    rounded-2xl
-
-    drop-shadow-[0_20px_40px_rgba(0,0,0,0.45)]
-
-    transform-gpu
-    transition-all
-    duration-700
-
-    hover:-translate-y-1
-    hover:scale-[1.01]
-  "
-/>
+              <img
+                src={heroImg}
+                alt="Jaid Khan"
+                className="
+                  w-full
+                  h-auto
+                  max-h-[500px]
+                  object-contain
+                  object-center
+                  rounded-2xl
+                  drop-shadow-[0_20px_40px_rgba(0,0,0,0.45)]
+                  transform-gpu
+                  transition-all
+                  duration-700
+                  hover:-translate-y-1
+                  hover:scale-[1.01]
+                "
+              />
 
               <div className="mt-6">
                 {[
@@ -160,18 +162,18 @@ export default function Hero() {
                   <div
                     key={label}
                     className="
-            flex justify-between py-4
-            border-b border-white/10
-            hover:bg-white/5
-            px-2
-            transition
-          "
+                      flex justify-between py-4
+                      border-b border-white/10
+                      hover:bg-white/5
+                      px-2
+                      transition
+                    "
                   >
-                    {/* label stays muted */}
-                    <span className="text-[#cfd6e6]/60">{label}</span>
+                    <span className="text-sm sm:text-base text-[#cfd6e6]/60">
+                      {label}
+                    </span>
 
-                    {/* value becomes yellow highlight */}
-                    <span className="text-[#fca311] font-semibold">
+                    <span className="text-sm sm:text-base text-[#fca311] font-semibold">
                       {value}
                     </span>
                   </div>
@@ -182,14 +184,14 @@ export default function Hero() {
             {/* CURRENT FOCUS */}
             <div
               className="
-    mt-6
-    border border-white/10
-    bg-[#070d1a]
-    rounded-2xl
-    p-5
-  "
+                mt-6
+                border border-white/10
+                bg-[#070d1a]
+                rounded-2xl
+                p-5
+              "
             >
-              <p className="text-sm uppercase tracking-wider text-[#fca311]/80 mb-4">
+              <p className="text-xs sm:text-sm uppercase tracking-wider text-[#fca311]/80 mb-4">
                 Current Focus
               </p>
 
@@ -203,17 +205,17 @@ export default function Hero() {
                   <span
                     key={item}
                     className="
-            px-3 py-2
-            bg-black/30
-            text-[#cfd6e6]
-            border border-white/10
-            rounded-lg
-            text-sm
-            hover:border-[#fca311]/50
-            hover:text-[#fca311]
-            hover:bg-black/50
-            transition
-          "
+                      px-3 py-2
+                      bg-black/30
+                      text-[#cfd6e6]
+                      border border-white/10
+                      rounded-lg
+                      text-xs sm:text-sm
+                      hover:border-[#fca311]/50
+                      hover:text-[#fca311]
+                      hover:bg-black/50
+                      transition
+                    "
                   >
                     {item}
                   </span>

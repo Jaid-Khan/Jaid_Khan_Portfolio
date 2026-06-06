@@ -23,17 +23,17 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* HEADER */}
         <div className="text-center max-w-4xl mx-auto">
-          <p className="text-sm uppercase tracking-[0.25em] text-[#fca311]/80 mb-6">
+          <p className="text-xs sm:text-sm uppercase tracking-[0.25em] text-[#fca311]/80 mb-6">
             Contact
           </p>
 
-          <h2 className="text-5xl md:text-7xl font-black text-white leading-[0.95]">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-white leading-[0.95]">
             Let's Build
             <br />
             <span className="text-[#fca311]">Something Great</span>
           </h2>
 
-          <p className="mt-8 text-lg text-[#cfd6e6]/75 leading-relaxed">
+          <p className="mt-8 text-base sm:text-lg text-[#cfd6e6]/75 leading-relaxed">
             Open to MERN Stack, Full Stack, Backend Development, and
             AI Application opportunities. Whether it's a job opportunity,
             freelance project, startup idea, or technical collaboration,
@@ -82,11 +82,11 @@ export default function Contact() {
                 <FaEnvelope />
               </div>
 
-              <p className="text-[#fca311] text-sm uppercase tracking-wider mb-2">
+              <p className="text-[#fca311] text-xs sm:text-sm uppercase tracking-wider mb-2">
                 Email
               </p>
 
-              <h3 className="text-xl font-bold text-white break-all">
+              <h3 className="text-lg sm:text-xl font-bold text-white break-all">
                 jaidkhan04072001@gmail.com
               </h3>
             </a>
@@ -118,11 +118,11 @@ export default function Contact() {
                 <FaPhoneAlt />
               </div>
 
-              <p className="text-[#fca311] text-sm uppercase tracking-wider mb-2">
+              <p className="text-[#fca311] text-xs sm:text-sm uppercase tracking-wider mb-2">
                 Phone
               </p>
 
-              <h3 className="text-xl font-bold text-white">
+              <h3 className="text-lg sm:text-xl font-bold text-white">
                 +91 8871104006
               </h3>
             </a>
@@ -192,31 +192,31 @@ export default function Contact() {
           {/* STATS */}
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             <div className="border-t border-[#fca311]/20 pt-6">
-              <h3 className="text-4xl font-black text-[#fca311]">
+              <h3 className="text-3xl sm:text-4xl font-black text-[#fca311]">
                 MERN
               </h3>
 
-              <p className="mt-2 text-[#cfd6e6]/60">
+              <p className="mt-2 text-xs sm:text-sm text-[#cfd6e6]/60">
                 Full Stack Development
               </p>
             </div>
 
             <div className="border-t border-[#fca311]/20 pt-6">
-              <h3 className="text-4xl font-black text-[#fca311]">
+              <h3 className="text-3xl sm:text-4xl font-black text-[#fca311]">
                 AI
               </h3>
 
-              <p className="mt-2 text-[#cfd6e6]/60">
+              <p className="mt-2 text-xs sm:text-sm text-[#cfd6e6]/60">
                 RAG & LLM Systems
               </p>
             </div>
 
             <div className="border-t border-[#fca311]/20 pt-6">
-              <h3 className="text-4xl font-black text-[#fca311]">
+              <h3 className="text-3xl sm:text-4xl font-black text-[#fca311]">
                 APIs
               </h3>
 
-              <p className="mt-2 text-[#cfd6e6]/60">
+              <p className="mt-2 text-xs sm:text-sm text-[#cfd6e6]/60">
                 Backend Engineering
               </p>
             </div>
