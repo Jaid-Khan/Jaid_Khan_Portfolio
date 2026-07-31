@@ -1,5 +1,5 @@
 // import heroImg from "../assets/Jaid_Khan_IMG.png";
-import heroImg from "../assets/Jaid_Khan_Avatar.png";
+import heroImg from "../assets/Jaid_Khan_Avatar.webp";
 
 export default function Hero() {
   const scrollToSection = (id) => {
