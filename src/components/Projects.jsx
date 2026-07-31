@@ -26,7 +26,7 @@ export default function Projects() {
         "Multer",
       ],
       github: "https://github.com/Jaid-Khan/OpsMind-AI",
-      demo: "",
+      demo: "https://opsmindapp.netlify.app/",
     },
     {
       title: "GitGuard AI — Automated Pull Request Sentinel",
@@ -54,7 +54,7 @@ export default function Projects() {
         "Tailwind CSS",
       ],
       github: "https://github.com/Jaid-Khan/Git_Guard",
-      demo: "",
+      demo: "https://git-guard.netlify.app/",
     },
     {
       title: "Government Job Portal & Recruitment Management System",
